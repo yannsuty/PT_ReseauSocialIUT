@@ -87,7 +87,7 @@
 									"left": 5,
 									"top": 5,
 									"width": 740,
-									"height": 860,
+									"height": 532,
 									"nameLabel": {
 										"$ref": "AAAAAAFmT3v/Tab5yNg="
 									},
@@ -196,14 +196,14 @@
 											"left": 90,
 											"top": 80,
 											"width": 1,
-											"height": 593
+											"height": 457
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 48,
 									"top": 40,
 									"width": 83.57177734375,
-									"height": 633,
+									"height": 497,
 									"nameCompartment": {
 										"$ref": "AAAAAAFmT42b0qcHM0E="
 									},
@@ -312,14 +312,14 @@
 											"left": 364,
 											"top": 80,
 											"width": 1,
-											"height": 593
+											"height": 457
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 312,
 									"top": 40,
 									"width": 103.82080078125,
-									"height": 633,
+									"height": 497,
 									"nameCompartment": {
 										"$ref": "AAAAAAFmT5aJ6qcoPWQ="
 									},
@@ -428,14 +428,14 @@
 											"left": 615,
 											"top": 80,
 											"width": 1,
-											"height": 481
+											"height": 457
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 552,
 									"top": 40,
 									"width": 126.92626953125,
-									"height": 521,
+									"height": 497,
 									"nameCompartment": {
 										"$ref": "AAAAAAFmT5bXqqdIBsI="
 									},
@@ -2054,7 +2054,7 @@
 									"left": 5,
 									"top": 8,
 									"width": 695,
-									"height": 595,
+									"height": 417,
 									"nameLabel": {
 										"$ref": "AAAAAAFmT/i1RKjrxzk="
 									},
@@ -2160,14 +2160,14 @@
 											"left": 146,
 											"top": 80,
 											"width": 1,
-											"height": 361
+											"height": 345
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 104,
 									"top": 40,
 									"width": 83.57177734375,
-									"height": 401,
+									"height": 385,
 									"nameCompartment": {
 										"$ref": "AAAAAAFmT/kj76j5Srw="
 									},
@@ -2386,14 +2386,14 @@
 											"left": 631,
 											"top": 80,
 											"width": 1,
-											"height": 361
+											"height": 345
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 568,
 									"top": 40,
 									"width": 126.92626953125,
-									"height": 401,
+									"height": 385,
 									"nameCompartment": {
 										"$ref": "AAAAAAFmT/lxS6k5/Xg="
 									},
