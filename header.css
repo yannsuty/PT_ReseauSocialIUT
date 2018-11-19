@@ -1,7 +1,7 @@
 
 /*---------------- HEADER ---------------*/
 header{
-	position: absolute;
+	position: fixed;
 	left:0px;
 	right:0px;
 	top:0px;
@@ -12,6 +12,7 @@ header{
 #headerHaut{
 	display: flex;
 	justify-content: space-between;
+	background-color:white;
 }
 
 #logosite{
