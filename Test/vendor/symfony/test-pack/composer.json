@@ -1,0 +1,13 @@
+{
+    "name": "symfony/test-pack",
+    "type": "symfony-pack",
+    "license": "MIT",
+    "description": "A pack for functional and end-to-end testing within a Symfony app",
+    "require": {
+        "php": "^7.0",
+        "symfony/browser-kit": "^3.3|^4.0",
+        "symfony/css-selector": "^3.3|^4.0",
+        "symfony/panther": "*",
+        "symfony/phpunit-bridge": "*"
+    }
+}
