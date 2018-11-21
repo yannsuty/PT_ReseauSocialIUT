@@ -146,7 +146,7 @@ class __TwigTemplate_ec04ef3229549a7fbaabad2984a9c95c15dc272536cfa0615de105ba42c
             <p>Lorem ipsum</p>
         </article>
         <article>
-            <h2>PrÃ©sentation</h2>
+            <h2>Présentation</h2>
             <p>Lorem ipsum</p>
         </article>
     </div>
@@ -210,6 +210,7 @@ class __TwigTemplate_ec04ef3229549a7fbaabad2984a9c95c15dc272536cfa0615de105ba42c
 \t\t</div>
 \t</div>
 {% endblock %}
+
 {% block body %}
 <div id=\"corps-site\">
     <div class=\"contenu-sect\">
@@ -222,12 +223,13 @@ class __TwigTemplate_ec04ef3229549a7fbaabad2984a9c95c15dc272536cfa0615de105ba42c
             <p>Lorem ipsum</p>
         </article>
         <article>
-            <h2>PrÃ©sentation</h2>
+            <h2>Présentation</h2>
             <p>Lorem ipsum</p>
         </article>
     </div>
 </div>
 {% endblock %}
 ", "accueil/index.html.twig", "/home/eureka/www/suty/PT_ReseauSocialIUT/Symfony/my_project/templates/accueil/index.html.twig");
+
     }
 }

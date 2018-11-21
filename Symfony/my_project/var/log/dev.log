@@ -212,6 +212,7 @@
 [2018-11-19 13:45:13] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
 [2018-11-19 13:54:58] request.INFO: Matched route "accueil". {"route":"accueil","route_parameters":{"_route":"accueil","_controller":"App\\Controller\\AccueilController::index"},"request_uri":"http://eureka.alwaysdata.net/suty/PT_ReseauSocialIUT/Symfony/my_project/public/","method":"GET"} []
 [2018-11-19 13:54:58] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
+
 [2018-11-19 14:31:14] request.INFO: Matched route "accueil". {"route":"accueil","route_parameters":{"_route":"accueil","_controller":"App\\Controller\\AccueilController::index"},"request_uri":"http://eureka.alwaysdata.net/suty/PT_ReseauSocialIUT/Symfony/my_project/public/","method":"GET"} []
 [2018-11-19 14:31:14] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
 [2018-11-19 18:10:34] request.INFO: Matched route "accueil". {"route":"accueil","route_parameters":{"_route":"accueil","_controller":"App\\Controller\\AccueilController::index"},"request_uri":"http://eureka.alwaysdata.net/suty/PT_ReseauSocialIUT/Symfony/my_project/public/","method":"GET"} []
@@ -304,3 +305,4 @@
 [2018-11-20 16:40:44] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
 [2018-11-20 16:42:11] request.INFO: Matched route "accueil". {"route":"accueil","route_parameters":{"_route":"accueil","_controller":"App\\Controller\\AccueilController::index"},"request_uri":"http://eureka.alwaysdata.net/suty/PT_ReseauSocialIUT/Symfony/my_project/public/","method":"GET"} []
 [2018-11-20 16:42:11] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
+
