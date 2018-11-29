@@ -1,40 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8" />
-	<link rel="stylesheet" type="text/css" href="header.css">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<title>Eureka</title>
-</head>
-<body>
-	<header>
-		<div id="headerHaut">
-			<div id="logo_site" class="divhead">	
-				<img id="logosite" src="image/logo.png">
-			</div>
-			<div id="connexion" class="divhead">
-				<div id="connexion2">
-					<input type="text" id="login" placeholder="Login"><br>
-					<input type="text" id="motDePasse" placeholder="Mot de passe"><br>
-					<input id="submit" class="bouton" type="submit" value="connexion">
-				</div>
-			</div>
-		</div>
+<!-- 
+	Page d'accueil du site Eureka
+	Auteurs : Pierre Rocher, Elric Maréchal, Lucas Vaurie
+-->
 
-		<div id="headerBas">
-			<div class="menu">
-				<ul>
-					<li><a href="#" class="active">Accueil</a></li>
-					<li><a href="Forum.html" class="boutonMenu">Forum</a></li>
-					<li><a href="EmploiDuTemps.html" class="boutonMenu">Emploi du temps</a></li>
-					<li><a href="News.html" class="boutonMenu">News</a></li>
-					<li><a href="Aide.html" class="boutonMenu">Aide</a></li>
-					<input href="#" class ="barreRech" name="barrederecherche" type="text" placeholder=" Rechercher" required />
-					<i class="material-icons">search</i>
-				</ul>
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Eureka</title>
+		<link rel="stylesheet" type="text/css" href="apparence_generale.css">
+		<link rel="stylesheet" type="text/css" href="header.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	</head>
+	<body>
+			<header>
+				<div id="headerHaut">
+					<div id="logo_site" class="divhead">	
+						<img id="logosite" src="image/logo.png">
+					</div>
+					<div id="connexion" class="divhead">
+						<div id="connexion2">
+							<input type="text" id="login" placeholder="Login"><br>
+							<input type="text" id="motDePasse" placeholder="Mot de passe"><br>
+							<input id="submit" class="bouton" type="submit" value="connexion">
+						</div>
+					</div>
+				</div>
+
+				<div id="headerBas">
+					<div class="menu">
+						<ul>
+							<li><a href="#" class="active">Accueil</a></li>
+							<li><a href="Forum.html" class="boutonMenu">Forum</a></li>
+							<li><a href="EmploiDuTemps.html" class="boutonMenu">Emploi du temps</a></li>
+							<li><a href="News.html" class="boutonMenu">News</a></li>
+							<li><a href="Aide.html" class="boutonMenu">Aide</a></li>
+							<input href="#" class ="barreRech" name="barrederecherche" type="text" placeholder=" Rechercher" required />
+							<i class="material-icons">search</i>
+						</ul>
+					</div>
+				</div>
+			</header>
+
+		<div id="corps-site">
+			<div class="contenu-sect">
+				<article>
+					<h2>Mon emploi du temps</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lacinia</p>
+				</article>
+				
+				<article>
+					<h2>Forum</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lacinia</p>
+				</article>
+				
+				<article>
+					<h2>Présentation</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lacinia</p>
+				</article>
 			</div>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lacinia, lorem sit amet dictum dapibus, magna arcu ullamcorper lorem, et scelerisque velit ligula eget metus. Aliquam hendrerit interdum mi, quis sollicitudin libero ultricies vel. In accumsan orci vel lobortis varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam commodo lacus augue, eu dapibus neque consectetur eleifend. Morbi non elementum metus. Mauris eget sem non arcu ullamcorper ultricies ut quis dolor. Nulla id risus viverra, interdum tortor id, ultrices ex. Duis vestibulum felis mauris, nec semper enim viverra vitae. In nec magna lobortis, sollicitudin mi ac, consectetur eros. Praesent placerat id mauris a dapibus. Maecenas pretium, magna quis maximus ultrices, tellus metus lacinia dolor, eu semper felis dolor eu enim. Nunc id pellentesque nisl, vel dapibus dui. Nullam pellentesque porttitor leo vitae varius.</p>
+			
+			<p>Vivamus at diam eleifend, pellentesque orci quis, auctor dolor. Maecenas eget dapibus lectus. Curabitur vitae suscipit sem, quis ultricies arcu. Aliquam dolor tellus, faucibus ac nulla ut, pretium tincidunt felis. Pellentesque iaculis eros ut eros imperdiet dignissim. In scelerisque arcu id euismod luctus. Nam placerat finibus efficitur. Donec erat risus, tempor vitae eros sed, facilisis congue tortor. Integer bibendum semper ligula, vitae finibus velit vestibulum non. Cras placerat vel arcu a scelerisque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+
+			<p>Nunc scelerisque posuere velit, at sodales orci pretium et. Suspendisse sit amet consectetur risus, id suscipit odio. Nullam eu urna nec mauris blandit faucibus. Quisque quis odio ornare, porttitor erat sed, efficitur urna. Proin luctus eros nec ex efficitur elementum. Donec ut urna sed ipsum dignissim feugiat nec quis magna. Nulla eget dolor sapien. Aliquam iaculis venenatis scelerisque. Duis imperdiet vitae risus at consectetur.</p>
+
+			<p>Fusce mattis elit sit amet ipsum pulvinar, molestie mattis elit placerat. Nulla vitae lorem at ex tincidunt luctus. Quisque dictum ac ligula id ornare. Nam ut porttitor nibh. Nunc lacinia ipsum ligula. Vivamus in mauris sed quam blandit volutpat et sed lorem. Cras ut mauris nec ligula ornare convallis eget sit amet urna. Nunc commodo augue a urna tristique varius. Suspendisse semper luctus molestie. Curabitur ac rhoncus ipsum. Etiam id velit vel nisl dapibus finibus. Cras tempor viverra sem, eu congue dolor sollicitudin in. Praesent sodales interdum mattis. Sed congue congue quam non tempus.</p>
+
+			<p>Duis ut nunc malesuada, tincidunt mauris in, vulputate justo. Quisque et orci eu ipsum placerat bibendum. Ut nec porta libero. Donec vitae pulvinar ex. Sed id ipsum tortor. Nam pretium faucibus posuere. Cras non felis est. Aliquam sollicitudin volutpat purus quis molestie. Etiam non consequat neque. Praesent cursus eu sem in sagittis. Aliquam nunc urna, lobortis non gravida ac, suscipit at nisi. Nam consequat elit tortor, posuere pellentesque dolor congue eget. </p> 
+
+			<p>f<br>f<br>f<br>f<br>f<br>f<br>f<br></p>
 		</div>
-	</header>
-</body>
+	</body>
 </html>
