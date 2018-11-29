@@ -1,0 +1,65 @@
+/*
+Ce fichier CSS regroupe les caractéristiques des élements d'apparence de base du site Eureka (taille de police, couleurs ...)
+*/
+
+body {
+	margin:0;
+	padding:0;
+}
+
+p {
+	font-family:"Arial";
+	font-size:14px;
+	color:#202020;
+}
+
+h2 {
+	font-family:"Arial";
+	padding-bottom:15px;
+	font-weight:bold;
+	font-size:15px;
+}
+
+/* Provisoire
+header {
+	width:100%;
+	background-color:black;
+	height:150px;
+	margin-bottom:50px;
+}
+*/
+
+#corps-site {
+	width:90%;
+	margin:auto;
+	text-align:justify;
+	padding-top:50px;
+}
+
+.contenu-sect {
+	display:inline-flex;
+	margin:auto;
+	width:100%;
+	padding-bottom:20px;
+}
+
+article {
+	width:32%;
+	border:1px solid black;
+	margin:auto;
+	padding:0.5%;
+	text-align:justify;
+}
+
+article:first-child {
+	background-color:#e42535;
+	color:white;
+}
+
+article:first-child(2) {
+	background-color:#949494
+}
+
+article:first-child(3) {
+	background-color:#d9d9d9
+}

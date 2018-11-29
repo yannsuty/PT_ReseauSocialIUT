@@ -174,7 +174,7 @@ interface EntityManagerInterface extends ObjectManager
      * @param string $entityName The name of the entity type.
      * @param mixed  $identifier The entity identifier.
      *
-     * @return object The (partial) entity reference.
+     * @return object|null The (partial) entity reference.
      */
     public function getPartialReference($entityName, $identifier);
 
@@ -249,7 +249,7 @@ interface EntityManagerInterface extends ObjectManager
     *
     * @deprecated
     *
-    * @param int $hydrationMode
+    * @param string|int $hydrationMode
     *
     * @return \Doctrine\ORM\Internal\Hydration\AbstractHydrator
     */
@@ -258,7 +258,7 @@ interface EntityManagerInterface extends ObjectManager
     /**
      * Create a new instance for the given hydration mode.
      *
-     * @param int $hydrationMode
+     * @param string|int $hydrationMode
      *
      * @return \Doctrine\ORM\Internal\Hydration\AbstractHydrator
      *

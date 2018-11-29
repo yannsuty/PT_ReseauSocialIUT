@@ -1,9 +1,6 @@
 {% extends 'base.html.twig' %}{#recupere base html head, body#}
 
 {% block title %}Hello !{% endblock %}{#titre#}
-{% block stylesheets %}
-    <link rel="stylesheet" href="../../assets/css/accueil.css">
-{% endblock %}
 {% block header %}{#insert le header#}
 	<div id="headerHaut">
 	    <div id="logo_site" class="divhead">
@@ -11,9 +8,11 @@
 	    </div>
     	<div id="connexion" class="divhead">
 	    	<div id="connexion2">
-    			<input type="text" id="login" placeholder="Login"/><br>
-			    <input type="text" id="mdp" placeholder="Mot de Passe"/><br>
+                <form method="post" action="./connexion">
+    			<input type="text" id="email" placeholder="Login"/><br>
+			    <input type="password" id="mdp" placeholder="Mot de Passe"/><br>
 		    	<input id="submit" class="bouton" type="submit" value="connexion"/>
+                </form>
 	    	</div>
     	</div>
 	</div>

@@ -2,6 +2,7 @@ index:
     path: /
     controller: App\Controller\AccueilController::index
 
+<<<<<<< HEAD
 accueil:
    path: /accueil
    controller: App\Controller\AccueilController::index
@@ -9,3 +10,8 @@ accueil:
 connexion:
     path: /connexion
     controller: App\Controller\AccueilController::connexion
+=======
+connexion:
+   path: /connexion
+   controller: App\Controller\AccueilController::connexion
+>>>>>>> suty
