@@ -49,6 +49,6 @@ class __TwigTemplate_fc542a7de482c2835472682935601b691daf572f0bb2dcf4d6ab5509f86
     public function getSourceContext()
     {
         return new Twig_Source("<?php echo \$view['form']->block(\$form, 'choice_widget_options') ?>
-", "@Framework/Form/choice_options.html.php", "/home/eureka/www/suty/PT_ReseauSocialIUT/Test/vendor/symfony/framework-bundle/Resources/views/Form/choice_options.html.php");
+", "@Framework/Form/choice_options.html.php", "/home/eureka/www/suty/PT_ReseauSocialIUT/Symfony/my_project/vendor/symfony/framework-bundle/Resources/views/Form/choice_options.html.php");
     }
 }

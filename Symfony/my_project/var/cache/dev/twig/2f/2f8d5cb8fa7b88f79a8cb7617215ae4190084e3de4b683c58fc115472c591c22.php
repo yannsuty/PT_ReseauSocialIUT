@@ -121,6 +121,6 @@ class __TwigTemplate_4a72e8c15d48921d111399aaa4629386d769a9b4befffff4f75fdf62915
 .exception-message-wrapper .container {
     min-height: auto;
 }
-", "@WebProfiler/Collector/exception.css.twig", "/home/eureka/www/suty/PT_ReseauSocialIUT/Test/vendor/symfony/web-profiler-bundle/Resources/views/Collector/exception.css.twig");
+", "@WebProfiler/Collector/exception.css.twig", "/home/eureka/www/suty/PT_ReseauSocialIUT/Symfony/my_project/vendor/symfony/web-profiler-bundle/Resources/views/Collector/exception.css.twig");
     }
 }

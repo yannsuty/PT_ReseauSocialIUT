@@ -88,6 +88,6 @@ class __TwigTemplate_d659c35df746b7dd6bffb3f274f3d60028ab752b9a3b1d64c562c2fb047
 {{ include('@Twig/Exception/traces.txt.twig', { exception: e }, with_context = false) }}
 
 {% endfor %}
-", "@Twig/Exception/exception.txt.twig", "/home/eureka/www/suty/PT_ReseauSocialIUT/Test/vendor/symfony/twig-bundle/Resources/views/Exception/exception.txt.twig");
+", "@Twig/Exception/exception.txt.twig", "/home/eureka/www/suty/PT_ReseauSocialIUT/Symfony/my_project/vendor/symfony/twig-bundle/Resources/views/Exception/exception.txt.twig");
     }
 }

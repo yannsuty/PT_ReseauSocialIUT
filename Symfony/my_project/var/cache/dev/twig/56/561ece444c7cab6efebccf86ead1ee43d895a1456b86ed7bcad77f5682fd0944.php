@@ -45,6 +45,6 @@ class __TwigTemplate_266167fe24423f8c429e6445f02c092d7fc313ae3a30fa95e77cb2b2968
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "@Framework/Form/button_label.html.php", "/home/eureka/www/suty/PT_ReseauSocialIUT/Test/vendor/symfony/framework-bundle/Resources/views/Form/button_label.html.php");
+        return new Twig_Source("", "@Framework/Form/button_label.html.php", "/home/eureka/www/suty/PT_ReseauSocialIUT/Symfony/my_project/vendor/symfony/framework-bundle/Resources/views/Form/button_label.html.php");
     }
 }

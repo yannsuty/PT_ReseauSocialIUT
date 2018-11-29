@@ -49,6 +49,6 @@ class __TwigTemplate_a5e6b066d42ee2c11afbcb8532b185fbda063348a611a99ddf039be40a7
     public function getSourceContext()
     {
         return new Twig_Source("<?php echo \$view['form']->widget(\$form) ?>
-", "@Framework/Form/hidden_row.html.php", "/home/eureka/www/suty/PT_ReseauSocialIUT/Test/vendor/symfony/framework-bundle/Resources/views/Form/hidden_row.html.php");
+", "@Framework/Form/hidden_row.html.php", "/home/eureka/www/suty/PT_ReseauSocialIUT/Symfony/my_project/vendor/symfony/framework-bundle/Resources/views/Form/hidden_row.html.php");
     }
 }

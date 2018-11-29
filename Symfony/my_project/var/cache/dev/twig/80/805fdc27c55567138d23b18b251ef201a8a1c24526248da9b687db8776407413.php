@@ -63,6 +63,6 @@ class __TwigTemplate_1f51c52db90775f54d8040848eae12ebea61d6e4b84f909efaffcb798a7
 <?php printf('%s=\"%s\" ', \$view->escape(\$k), \$view->escape(\$v)) ?>
 <?php endif ?>
 <?php endforeach ?>
-", "@Framework/Form/choice_attributes.html.php", "/home/eureka/www/suty/PT_ReseauSocialIUT/Test/vendor/symfony/framework-bundle/Resources/views/Form/choice_attributes.html.php");
+", "@Framework/Form/choice_attributes.html.php", "/home/eureka/www/suty/PT_ReseauSocialIUT/Symfony/my_project/vendor/symfony/framework-bundle/Resources/views/Form/choice_attributes.html.php");
     }
 }

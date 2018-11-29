@@ -421,6 +421,6 @@ class __TwigTemplate_12144ace5cf6ab50bef0cab8748cbc6fe8799dec838d99a24d61f6a3aff
     });
 
 /*]]>*/</script>
-", "@Twig/base_js.html.twig", "/home/eureka/www/suty/PT_ReseauSocialIUT/Test/vendor/symfony/twig-bundle/Resources/views/base_js.html.twig");
+", "@Twig/base_js.html.twig", "/home/eureka/www/suty/PT_ReseauSocialIUT/Symfony/my_project/vendor/symfony/twig-bundle/Resources/views/base_js.html.twig");
     }
 }

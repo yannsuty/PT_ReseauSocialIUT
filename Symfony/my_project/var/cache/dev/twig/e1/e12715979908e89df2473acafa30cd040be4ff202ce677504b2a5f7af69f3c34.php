@@ -95,6 +95,6 @@ class __TwigTemplate_2a55bed02795db139bbd4f7ebfa531166d4584b0d0d9129cc7b74bae812
         </div>
     </body>
 </html>
-", "@Twig/Exception/error.html.twig", "/home/eureka/www/suty/PT_ReseauSocialIUT/Test/vendor/symfony/twig-bundle/Resources/views/Exception/error.html.twig");
+", "@Twig/Exception/error.html.twig", "/home/eureka/www/suty/PT_ReseauSocialIUT/Symfony/my_project/vendor/symfony/twig-bundle/Resources/views/Exception/error.html.twig");
     }
 }

@@ -65,6 +65,6 @@ class __TwigTemplate_4d86fb9df51459897ce5504174ed7b77cf199a827d96df8e5f0ee19cabd
 {{ status_code }} {{ status_text }}
 
 */
-", "@Twig/Exception/error.js.twig", "/home/eureka/www/suty/PT_ReseauSocialIUT/Test/vendor/symfony/twig-bundle/Resources/views/Exception/error.js.twig");
+", "@Twig/Exception/error.js.twig", "/home/eureka/www/suty/PT_ReseauSocialIUT/Symfony/my_project/vendor/symfony/twig-bundle/Resources/views/Exception/error.js.twig");
     }
 }

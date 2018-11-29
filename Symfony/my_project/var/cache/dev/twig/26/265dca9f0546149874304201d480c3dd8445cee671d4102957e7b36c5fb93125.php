@@ -157,6 +157,6 @@ class __TwigTemplate_640aad2a11a258aa369ec425919960de0d323b115d4bee3d2dfe1cafd28
         {%- endfor -%}
     </pre>
 {% endif %}
-", "@Doctrine/Collector/explain.html.twig", "/home/eureka/www/suty/PT_ReseauSocialIUT/Test/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig");
+", "@Doctrine/Collector/explain.html.twig", "/home/eureka/www/suty/PT_ReseauSocialIUT/Symfony/my_project/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig");
     }
 }

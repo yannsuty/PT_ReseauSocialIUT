@@ -63,13 +63,14 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         switch ($pathinfo) {
             case '/':
-                // accueil
-                return array('_route' => 'accueil', '_controller' => 'App\\Controller\\AccueilController::index');
+                // app_accueil_index
+                return array('_route' => 'app_accueil_index', '_controller' => 'App\\Controller\\AccueilController::index');
                 // index
                 return array('_route' => 'index', '_controller' => 'App\\Controller\\IndexController::index');
                 break;
             default:
                 $routes = array(
+                    '/connexion' => array(array('_route' => 'app_accueil_connexion', '_controller' => 'App\\Controller\\AccueilController::connexion'), null, null, null),
                     '/_profiler/' => array(array('_route' => '_profiler_home', '_controller' => 'web_profiler.controller.profiler::homeAction'), null, null, null),
                     '/_profiler/search' => array(array('_route' => '_profiler_search', '_controller' => 'web_profiler.controller.profiler::searchAction'), null, null, null),
                     '/_profiler/search_bar' => array(array('_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'), null, null, null),

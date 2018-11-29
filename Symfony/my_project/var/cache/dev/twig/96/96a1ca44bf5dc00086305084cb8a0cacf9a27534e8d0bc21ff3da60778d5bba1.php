@@ -97,9 +97,11 @@ class __TwigTemplate_ec04ef3229549a7fbaabad2984a9c95c15dc272536cfa0615de105ba42c
 \t    </div>
     \t<div id=\"connexion\" class=\"divhead\">
 \t    \t<div id=\"connexion2\">
-    \t\t\t<input type=\"text\" id=\"login\" placeholder=\"Login\"/><br>
-\t\t\t    <input type=\"text\" id=\"mdp\" placeholder=\"Mot de Passe\"/><br>
+                <form method=\"post\" action=\"./connexion\">
+    \t\t\t<input type=\"text\" id=\"email\" placeholder=\"Login\"/><br>
+\t\t\t    <input type=\"password\" id=\"mdp\" placeholder=\"Mot de Passe\"/><br>
 \t\t    \t<input id=\"submit\" class=\"bouton\" type=\"submit\" value=\"connexion\"/>
+                </form>
 \t    \t</div>
     \t</div>
 \t</div>
@@ -125,7 +127,7 @@ class __TwigTemplate_ec04ef3229549a7fbaabad2984a9c95c15dc272536cfa0615de105ba42c
 
     }
 
-    // line 34
+    // line 36
     public function block_body($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -134,7 +136,7 @@ class __TwigTemplate_ec04ef3229549a7fbaabad2984a9c95c15dc272536cfa0615de105ba42c
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 35
+        // line 37
         echo "<div id=\"corps-site\">
     <div class=\"contenu-sect\">
         <article>
@@ -146,7 +148,7 @@ class __TwigTemplate_ec04ef3229549a7fbaabad2984a9c95c15dc272536cfa0615de105ba42c
             <p>Lorem ipsum</p>
         </article>
         <article>
-            <h2>Présentation</h2>
+            <h2>PrÃ©sentation</h2>
             <p>Lorem ipsum</p>
         </article>
     </div>
@@ -172,7 +174,7 @@ class __TwigTemplate_ec04ef3229549a7fbaabad2984a9c95c15dc272536cfa0615de105ba42c
 
     public function getDebugInfo()
     {
-        return array (  138 => 35,  129 => 34,  94 => 8,  85 => 7,  74 => 5,  65 => 4,  47 => 3,  15 => 1,);
+        return array (  140 => 37,  131 => 36,  94 => 8,  85 => 7,  74 => 5,  65 => 4,  47 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -190,9 +192,11 @@ class __TwigTemplate_ec04ef3229549a7fbaabad2984a9c95c15dc272536cfa0615de105ba42c
 \t    </div>
     \t<div id=\"connexion\" class=\"divhead\">
 \t    \t<div id=\"connexion2\">
-    \t\t\t<input type=\"text\" id=\"login\" placeholder=\"Login\"/><br>
-\t\t\t    <input type=\"text\" id=\"mdp\" placeholder=\"Mot de Passe\"/><br>
+                <form method=\"post\" action=\"./connexion\">
+    \t\t\t<input type=\"text\" id=\"email\" placeholder=\"Login\"/><br>
+\t\t\t    <input type=\"password\" id=\"mdp\" placeholder=\"Mot de Passe\"/><br>
 \t\t    \t<input id=\"submit\" class=\"bouton\" type=\"submit\" value=\"connexion\"/>
+                </form>
 \t    \t</div>
     \t</div>
 \t</div>
@@ -210,7 +214,6 @@ class __TwigTemplate_ec04ef3229549a7fbaabad2984a9c95c15dc272536cfa0615de105ba42c
 \t\t</div>
 \t</div>
 {% endblock %}
-
 {% block body %}
 <div id=\"corps-site\">
     <div class=\"contenu-sect\">
@@ -223,13 +226,12 @@ class __TwigTemplate_ec04ef3229549a7fbaabad2984a9c95c15dc272536cfa0615de105ba42c
             <p>Lorem ipsum</p>
         </article>
         <article>
-            <h2>Présentation</h2>
+            <h2>PrÃ©sentation</h2>
             <p>Lorem ipsum</p>
         </article>
     </div>
 </div>
 {% endblock %}
 ", "accueil/index.html.twig", "/home/eureka/www/suty/PT_ReseauSocialIUT/Symfony/my_project/templates/accueil/index.html.twig");
-
     }
 }

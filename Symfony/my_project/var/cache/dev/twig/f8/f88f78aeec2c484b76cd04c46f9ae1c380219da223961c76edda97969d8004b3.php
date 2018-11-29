@@ -57,6 +57,6 @@ class __TwigTemplate_fb2058dc84aa21e059799cbcc2b0473fe3e54fd3d0d746ed198285f5e37
         <?php echo \$view['form']->widget(\$form); ?>
     </td>
 </tr>
-", "@Framework/FormTable/hidden_row.html.php", "/home/eureka/www/suty/PT_ReseauSocialIUT/Test/vendor/symfony/framework-bundle/Resources/views/FormTable/hidden_row.html.php");
+", "@Framework/FormTable/hidden_row.html.php", "/home/eureka/www/suty/PT_ReseauSocialIUT/Symfony/my_project/vendor/symfony/framework-bundle/Resources/views/FormTable/hidden_row.html.php");
     }
 }

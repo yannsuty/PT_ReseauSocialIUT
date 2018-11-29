@@ -19,10 +19,12 @@
 
 namespace Doctrine\ORM;
 
+use Doctrine\Common\Persistence\Mapping\MappingException;
 use Doctrine\Common\Util\ClassUtils;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
 
+use Doctrine\ORM\Mapping\MappingException as ORMMappingException;
 use Doctrine\ORM\Query\Parameter;
 use Doctrine\ORM\Cache\QueryCacheKey;
 use Doctrine\DBAL\Cache\QueryCacheProfile;
@@ -98,7 +100,7 @@ abstract class AbstractQuery
     /**
      * The hydration mode.
      *
-     * @var integer
+     * @var string|int
      */
     protected $_hydrationMode = self::HYDRATE_OBJECT;
 
@@ -410,16 +412,24 @@ abstract class AbstractQuery
             return $value;
         }
 
-        if (is_object($value) && $this->_em->getMetadataFactory()->hasMetadataFor(ClassUtils::getClass($value))) {
+        if ($value instanceof Mapping\ClassMetadata) {
+            return $value->name;
+        }
+
+        if (! is_object($value)) {
+            return $value;
+        }
+
+        try {
             $value = $this->_em->getUnitOfWork()->getSingleIdentifierValue($value);
 
             if ($value === null) {
                 throw ORMInvalidArgumentException::invalidIdentifierBindingEntity();
             }
-        }
-
-        if ($value instanceof Mapping\ClassMetadata) {
-            return $value->name;
+        } catch (MappingException | ORMMappingException $e) {
+            // Silence any mapping exceptions. These can occur if the object in
+            // question is not a mapped entity, in which case we just don't do
+            // any preparation on the value.
         }
 
         return $value;
@@ -680,8 +690,8 @@ abstract class AbstractQuery
     /**
      * Defines the processing mode to be used during hydration / result set transformation.
      *
-     * @param integer $hydrationMode Doctrine processing mode to be used during hydration process.
-     *                               One of the Query::HYDRATE_* constants.
+     * @param string|int $hydrationMode Doctrine processing mode to be used during hydration process.
+     *                                  One of the Query::HYDRATE_* constants.
      *
      * @return static This query instance.
      */
@@ -695,7 +705,7 @@ abstract class AbstractQuery
     /**
      * Gets the hydration mode currently used by the query.
      *
-     * @return integer
+     * @return string|int
      */
     public function getHydrationMode()
     {
@@ -707,7 +717,7 @@ abstract class AbstractQuery
      *
      * Alias for execute(null, $hydrationMode = HYDRATE_OBJECT).
      *
-     * @param int $hydrationMode
+     * @param string|int $hydrationMode
      *
      * @return mixed
      */
@@ -743,7 +753,7 @@ abstract class AbstractQuery
     /**
      * Get exactly one result or null.
      *
-     * @param int $hydrationMode
+     * @param string|int $hydrationMode
      *
      * @return mixed
      *
@@ -781,7 +791,7 @@ abstract class AbstractQuery
      * If the result is not unique, a NonUniqueResultException is thrown.
      * If there is no result, a NoResultException is thrown.
      *
-     * @param integer $hydrationMode
+     * @param string|int $hydrationMode
      *
      * @return mixed
      *
@@ -875,7 +885,7 @@ abstract class AbstractQuery
      * iterate over the result.
      *
      * @param ArrayCollection|array|null $parameters    The query parameters.
-     * @param integer|null               $hydrationMode The hydration mode to use.
+     * @param string|int|null            $hydrationMode The hydration mode to use.
      *
      * @return \Doctrine\ORM\Internal\Hydration\IterableResult
      */
@@ -899,7 +909,7 @@ abstract class AbstractQuery
      * Executes the query.
      *
      * @param ArrayCollection|array|null $parameters Query parameters.
-     * @param integer|null               $hydrationMode Processing mode to be used during the hydration process.
+     * @param string|int|null            $hydrationMode Processing mode to be used during the hydration process.
      *
      * @return mixed
      */
@@ -916,7 +926,7 @@ abstract class AbstractQuery
      * Execute query ignoring second level cache.
      *
      * @param ArrayCollection|array|null $parameters
-     * @param integer|null               $hydrationMode
+     * @param string|int|null            $hydrationMode
      *
      * @return mixed
      */
@@ -974,7 +984,7 @@ abstract class AbstractQuery
      * Load from second level cache or executes the query and put into cache.
      *
      * @param ArrayCollection|array|null $parameters
-     * @param integer|null               $hydrationMode
+     * @param string|int|null            $hydrationMode
      *
      * @return mixed
      */

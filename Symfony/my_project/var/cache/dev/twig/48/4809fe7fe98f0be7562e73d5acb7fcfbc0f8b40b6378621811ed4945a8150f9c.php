@@ -173,6 +173,6 @@ class __TwigTemplate_fc3ce22e392b7ae8863880e75df7deadd6aa19f21fa3d14a0760b2d9c13
         </div>
     </div>
 </div>
-", "@Twig/Exception/traces.html.twig", "/home/eureka/www/suty/PT_ReseauSocialIUT/Test/vendor/symfony/twig-bundle/Resources/views/Exception/traces.html.twig");
+", "@Twig/Exception/traces.html.twig", "/home/eureka/www/suty/PT_ReseauSocialIUT/Symfony/my_project/vendor/symfony/twig-bundle/Resources/views/Exception/traces.html.twig");
     }
 }
