@@ -3,12 +3,12 @@
 Notes :
 
 *GIT*
-Se rendre sur sa branche :
+ Se rendre sur sa branche :
 - git checkout <nom_branche>
   /!\ Bien faire attention à 'pull' et 'commit' sur sa branche /!\
 
 *ALWAYSDATA*
-Se connecter à l'hébergeur web :
+ Se connecter à l'hébergeur web :
 - Identifiant : vianney.demarquet@etu.u-pec.fr
 - Mot de passe : PT_IUT_2018
 
