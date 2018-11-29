@@ -16,5 +16,8 @@ class AccueilController extends AbstractController
             'controller_name' => 'AccueilController',
         ]);
  	}
-
+    public function connexion() {
+        echo "connecte";
+        return $this->render('accueil/index.html.twig');
+    }
 }
