@@ -396,6 +396,6 @@ class __TwigTemplate_cd260fa18fa9fd9a7a1478b66cc8e2d9059bbc4f1d8b764a5acff802696
 {% block body %}
     {% include '@Twig/Exception/exception.html.twig' %}
 {% endblock %}
-", "@Twig/Exception/exception_full.html.twig", "/home/eureka/www/suty/PT_ReseauSocialIUT/Test/vendor/symfony/twig-bundle/Resources/views/Exception/exception_full.html.twig");
+", "@Twig/Exception/exception_full.html.twig", "/home/eureka/www/PT_ReseauSocialIUT/Symfony/my_project/vendor/symfony/twig-bundle/Resources/views/Exception/exception_full.html.twig");
     }
 }

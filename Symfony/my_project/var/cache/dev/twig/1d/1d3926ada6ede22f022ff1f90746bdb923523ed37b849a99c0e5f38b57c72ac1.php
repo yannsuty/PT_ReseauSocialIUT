@@ -992,6 +992,6 @@ class __TwigTemplate_20d754e48050ad7c5115d7e8efa7804e6ec53ec9faf507743f5b17f84db
         {% endif %}
     {% endfor %}
 {% endblock %}
-", "@Swiftmailer/Collector/swiftmailer.html.twig", "/home/eureka/www/suty/PT_ReseauSocialIUT/Test/vendor/symfony/swiftmailer-bundle/Resources/views/Collector/swiftmailer.html.twig");
+", "@Swiftmailer/Collector/swiftmailer.html.twig", "/home/eureka/www/PT_ReseauSocialIUT/Symfony/my_project/vendor/symfony/swiftmailer-bundle/Resources/views/Collector/swiftmailer.html.twig");
     }
 }

@@ -62,12 +62,6 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
         switch ($pathinfo) {
-            case '/':
-                // accueil
-                return array('_route' => 'accueil', '_controller' => 'App\\Controller\\AccueilController::index');
-                // index
-                return array('_route' => 'index', '_controller' => 'App\\Controller\\IndexController::index');
-                break;
             default:
                 $routes = array(
                     '/_profiler/' => array(array('_route' => '_profiler_home', '_controller' => 'web_profiler.controller.profiler::homeAction'), null, null, null),
@@ -75,6 +69,9 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     '/_profiler/search_bar' => array(array('_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'), null, null, null),
                     '/_profiler/phpinfo' => array(array('_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'), null, null, null),
                     '/_profiler/open' => array(array('_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'), null, null, null),
+                    '/' => array(array('_route' => 'index', '_controller' => 'App\\Controller\\AccueilController::index'), null, null, null),
+                    '/accueil' => array(array('_route' => 'accueil', '_controller' => 'App\\Controller\\AccueilController::index'), null, null, null),
+                    '/connexion' => array(array('_route' => 'connexion', '_controller' => 'App\\Controller\\AccueilController::connexion'), null, null, null),
                 );
 
                 if (!isset($routes[$pathinfo])) {

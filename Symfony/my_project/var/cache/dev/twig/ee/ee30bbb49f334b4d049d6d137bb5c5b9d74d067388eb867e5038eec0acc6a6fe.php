@@ -205,6 +205,6 @@ class __TwigTemplate_5ca2401da3e55d715c96ab1b0bb9abd4dcb712d13c602ec15240f302fa2
         </div>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/exception.html.twig", "/home/eureka/www/suty/PT_ReseauSocialIUT/Test/vendor/symfony/web-profiler-bundle/Resources/views/Collector/exception.html.twig");
+", "@WebProfiler/Collector/exception.html.twig", "/home/eureka/www/PT_ReseauSocialIUT/Symfony/my_project/vendor/symfony/web-profiler-bundle/Resources/views/Collector/exception.html.twig");
     }
 }

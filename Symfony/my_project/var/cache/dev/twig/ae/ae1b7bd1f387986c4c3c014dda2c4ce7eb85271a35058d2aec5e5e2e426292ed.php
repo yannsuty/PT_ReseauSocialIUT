@@ -210,6 +210,6 @@ class __TwigTemplate_4f6a5e0520cafab1e419169613b51bf5622d950022bdf856792e94b0b44
         {{ include('@Twig/base_js.html.twig') }}
     </body>
 </html>
-", "@Twig/layout.html.twig", "/home/eureka/www/suty/PT_ReseauSocialIUT/Test/vendor/symfony/twig-bundle/Resources/views/layout.html.twig");
+", "@Twig/layout.html.twig", "/home/eureka/www/PT_ReseauSocialIUT/Symfony/my_project/vendor/symfony/twig-bundle/Resources/views/layout.html.twig");
     }
 }

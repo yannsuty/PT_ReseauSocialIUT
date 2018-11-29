@@ -936,6 +936,6 @@ class __TwigTemplate_e8d9778442bb888c7a9a0d71105c48c441e10e0e8750ba317f2d5bd39f7
         </table>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/config.html.twig", "/home/eureka/www/suty/PT_ReseauSocialIUT/Test/vendor/symfony/web-profiler-bundle/Resources/views/Collector/config.html.twig");
+", "@WebProfiler/Collector/config.html.twig", "/home/eureka/www/PT_ReseauSocialIUT/Symfony/my_project/vendor/symfony/web-profiler-bundle/Resources/views/Collector/config.html.twig");
     }
 }
