@@ -1,0 +1,88 @@
+<!-- 
+	Forum du site Eureka
+	Auteurs : Elric Launay
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Forum Eureka</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	</head>
+	<body>
+		<div id="left-menu">
+			<div id="recherche-container">
+				<form action="/action_page.php">
+			    	<input type="text" placeholder="Rechercher.." name="rechercher">
+			    	<button type="submit">Submit</button>
+			    </form>
+			<div id="accordion">
+                <ul>
+                    <li>
+                        <a href="">Sujets favoris</a>
+                    </li>
+                    <li>
+                        <a href="">Derniers messages</a>
+                    </li>
+                    <li class="accordion-section">
+                        <div onclick="accordion(this)">Informatique</div>
+                        <ul>
+                            <li>
+                                APL
+                            </li>
+                            <li>
+                                ASR
+                            </li>
+                            <li>
+                                ACDA
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="accordion-section">
+                        <div onclick="accordion(this)">GEA</div>
+                        <ul>
+                            <li>
+                                APL
+                            </li>
+                            <li>
+                                ASR
+                            </li>
+                            <li>
+                                ACDA
+                            </li>
+                        </ul>
+                        
+                    </li>
+                    <li class="accordion-section">
+                        <div onclick="accordion(this)">TC</div>
+                        <ul>
+                            <li>
+                                APL
+                            </li>
+                            <li>
+                                ASR
+                            </li>
+                            <li>
+                                ACDA
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+		</div>
+		</div>
+		<div id="right-forum-content">
+		</div>
+        <script type="text/javascript">
+            var a=1;
+            function accordion(elem){
+                if(a==1)
+                    elem.parentElement.getElementsByTagName("UL")[0].style.display ="none";  
+                else
+                    elem.parentElement.getElementsByTagName("UL")[0].style.display ="block";
+                a=(a+1)%2;
+            }
+        </script>
+	</body>
+</html>
