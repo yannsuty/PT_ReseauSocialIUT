@@ -19,6 +19,13 @@ class InscriptionController extends AbstractController
        
         $form = $this->createForm(Inscription::class);
 
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid())
+        {
+           echo "ça mache";
+        }
+
         return $this->render('Inscription.html.twig', array(
             'form' => $form->createView(),
         ));

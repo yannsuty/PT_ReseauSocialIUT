@@ -15,12 +15,12 @@ class Inscription extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder #créé les champs
-            ->add('Nom', TextType::class)
-            ->add('Prenom', TextType::class)
-            ->add('Date_de_naissance', DateType::class, array('widget' => 'single_text', 'format' => 'yyyy-MM-dd'))
+            ->add('nom', TextType::class)
+            ->add('prenom', TextType::class)
+            ->add('date_de_naissance', DateType::class, array('widget' => 'single_text', 'format' => 'yyyy-MM-dd'))
             ->add('mail', TextType::class)
-            ->add('mail_upec', TextType::class)
-            ->add('status', TextType::class)
+            ->add('mail_upec', TextType::class, array('required' => false, 'empty_data' => 'none'))
+            ->add('statut', TextType::class)
         ;
     }
     
