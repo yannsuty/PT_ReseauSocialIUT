@@ -190,6 +190,6 @@ class __TwigTemplate_f68dac04a77341dff5e42b9f319cf78e9dd201a98f63e26755653442384
         })|raw }}
     </div>
 {% endif %}
-", "@Twig/Exception/trace.html.twig", "/home/eureka/www/suty/PT_ReseauSocialIUT/Test/vendor/symfony/twig-bundle/Resources/views/Exception/trace.html.twig");
+", "@Twig/Exception/trace.html.twig", "/home/eureka/www/demarquet/PT_ReseauSocialIUT/Symfony/my_project/vendor/symfony/twig-bundle/Resources/views/Exception/trace.html.twig");
     }
 }

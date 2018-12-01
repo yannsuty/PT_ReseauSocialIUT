@@ -76,7 +76,7 @@ class __TwigTemplate_ec04ef3229549a7fbaabad2984a9c95c15dc272536cfa0615de105ba42c
 \t\t<div id=\"connexion\" class=\"divhead\">
 \t\t\t<div id=\"connexion2\">
 \t\t\t\t<input type=\"text\" id=\"login\" placeholder=\"Login\"/><br>
-\t\t\t\t<input type=\"text\" id=\"mdp\" placeholder=\"Mot de Passe\"/><br>
+\t\t\t\t<input type=\"password\" id=\"mdp\" placeholder=\"Mot de Passe\"/><br>
 \t\t\t\t<input id=\"submit\" class=\"bouton\" type=\"submit\" value=\"connexion\"/>
 \t\t\t</div>
 \t\t</div>
@@ -131,7 +131,7 @@ class __TwigTemplate_ec04ef3229549a7fbaabad2984a9c95c15dc272536cfa0615de105ba42c
 \t\t<div id=\"connexion\" class=\"divhead\">
 \t\t\t<div id=\"connexion2\">
 \t\t\t\t<input type=\"text\" id=\"login\" placeholder=\"Login\"/><br>
-\t\t\t\t<input type=\"text\" id=\"mdp\" placeholder=\"Mot de Passe\"/><br>
+\t\t\t\t<input type=\"password\" id=\"mdp\" placeholder=\"Mot de Passe\"/><br>
 \t\t\t\t<input id=\"submit\" class=\"bouton\" type=\"submit\" value=\"connexion\"/>
 \t\t\t</div>
 \t\t</div>
@@ -150,6 +150,6 @@ class __TwigTemplate_ec04ef3229549a7fbaabad2984a9c95c15dc272536cfa0615de105ba42c
 \t\t</div>
 \t</div>
 {% endblock %}
-", "accueil/index.html.twig", "/home/eureka/www/PT_ReseauSocialIUT/Symfony/my_project/templates/accueil/index.html.twig");
+", "accueil/index.html.twig", "/home/eureka/www/demarquet/PT_ReseauSocialIUT/Symfony/my_project/templates/accueil/index.html.twig");
     }
 }

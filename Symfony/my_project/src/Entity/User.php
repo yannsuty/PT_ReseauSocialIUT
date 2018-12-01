@@ -18,7 +18,7 @@ class User implements UserInterface
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=180, unique=true)
+     * @ORM\Column(type="string", length=150, unique=true)
      */
     private $email;
 
@@ -32,6 +32,23 @@ class User implements UserInterface
      * @ORM\Column(type="string")
      */
     private $password;
+    
+     /**
+     * @ORM\Column(type="string", length=50)
+     */
+    private $nom;
+    
+    /**
+     * @ORM\Column(type="string", length=50)
+     */
+    private $prenom;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $statut;
+
+    
 
     public function getId(): ?int
     {
