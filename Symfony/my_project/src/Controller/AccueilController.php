@@ -4,7 +4,9 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
-#use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Request;
+use App\Form\accueil\index;
+use App\Entity\User;
 
 class AccueilController extends AbstractController
 {
@@ -12,19 +14,19 @@ class AccueilController extends AbstractController
      * @Route("/")
      */
     public function index()
-    {  
+    {
+        $form = $this->createFormBuilder(null)->getForm();
+        $form->handleRequest($request);  
         return $this->render('accueil/index.html.twig', [
-            'controller_name' => 'AccueilController',
+            'form' => $form->createView()
         ]);
  	}
-<<<<<<< HEAD
-    public function connexion() {
-        echo "connecte";
-=======
-
     public function connexion(Request $request) {
-        echo "hello";
->>>>>>> suty
+        if($form->isSubmitted()&&$form->isValid()) {
+            echo "connecte";
+        }
         return $this->render('accueil/index.html.twig');
     }
 }
+
+#watch?v=ul7DMDPpiOQ

@@ -8,11 +8,11 @@
 	    </div>
     	<div id="connexion" class="divhead">
 	    	<div id="connexion2">
-                <form method="post" action="./connexion">
-    			<input type="text" id="email" placeholder="Login"/><br>
-			    <input type="password" id="mdp" placeholder="Mot de Passe"/><br>
-		    	<input id="submit" class="bouton" type="submit" value="connexion"/>
-                </form>
+                {{ form_start(form) }}
+                    {{ form_row(form.email) }}
+                    {{ form_row(form.password) }}
+                    <input id="submit" class="bouton" type="submit" value="connexion"/>
+                {{ form_end(form) }}
 	    	</div>
     	</div>
 	</div>
