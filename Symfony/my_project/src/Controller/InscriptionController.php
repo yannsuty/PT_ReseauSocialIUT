@@ -23,7 +23,7 @@ class InscriptionController extends AbstractController
 
         if($form->isSubmitted() && $form->isValid())
         {
-           echo "ça mache";
+            echo "inscription réussi";
         }
 
         return $this->render('Inscription.html.twig', array(

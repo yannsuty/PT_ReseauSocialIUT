@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 
 /**
@@ -20,11 +21,13 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=150, unique=true)
+     * @Assert\Email(message = "mail invalide")
      */
     private $mail;
 
     /**
      * @ORM\Column(type="string", length=150, unique=true)
+     * @Assert\Email(message = "mail invalide", checkMX = true))
      */
     private $mail_upec;
 
@@ -40,12 +43,14 @@ class User implements UserInterface
     private $password;
     
      /**
-     * @ORM\Column(type="string", length=50)
+      * @ORM\Column(type="string", length=50)
+      * @Assert\Length(max = 50, maxMessage = "Nom trop long")
      */
     private $nom;
     
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\Length(max = 50, maxMessage = "Prenom trop long")
      */
     private $prenom;
     
