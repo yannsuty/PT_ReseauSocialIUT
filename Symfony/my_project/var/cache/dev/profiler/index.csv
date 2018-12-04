@@ -401,3 +401,9 @@ fa0f6e,2a01:729:b9:0:5054:ff:feb0:6ea8,POST,http://eureka.alwaysdata.net/demarqu
 7bb9a4,2a01:729:b9:0:5054:ff:feb0:6ea8,POST,http://eureka.alwaysdata.net/demarquet/PT_ReseauSocialIUT/Symfony/my_project/public/inscription,1543858128,,200
 1cfb4c,2a01:729:b9:0:5054:ff:feb0:6ea8,POST,http://eureka.alwaysdata.net/demarquet/PT_ReseauSocialIUT/Symfony/my_project/public/inscription,1543858160,,200
 f46a03,37.164.27.241,GET,http://eureka.alwaysdata.net/demarquet/PT_ReseauSocialIUT/Symfony/my_project/public/inscription,1543860031,,200
+e0d7e3,2a01:729:b9:0:5054:ff:feb0:6ea8,GET,http://eureka.alwaysdata.net/PT_ReseauSocialIUT/Symfony/my_project/public/,1543925462,,200
+e161a2,2a01:729:b9:0:5054:ff:feb0:6ea8,GET,http://eureka.alwaysdata.net/PT_ReseauSocialIUT/Symfony/my_project/public/inscription,1543925744,,200
+5cc007,2a01:729:b9:0:5054:ff:feb0:6ea8,GET,http://eureka.alwaysdata.net/PT_ReseauSocialIUT/Symfony/my_project/public/inscription,1543925785,,200
+d8a310,2a01:729:b9:0:5054:ff:feb0:6ea8,GET,http://eureka.alwaysdata.net/PT_ReseauSocialIUT/Symfony/my_project/public/,1543925789,,200
+fd5cd0,2a01:729:b9:0:5054:ff:feb0:6ea8,GET,http://eureka.alwaysdata.net/PT_ReseauSocialIUT/Symfony/my_project/public/image/logo.png,1543925789,216e6a,200
+216e6a,2a01:729:b9:0:5054:ff:feb0:6ea8,GET,http://eureka.alwaysdata.net/PT_ReseauSocialIUT/Symfony/my_project/public/image/logo.png,1543925789,,404
