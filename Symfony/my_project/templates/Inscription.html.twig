@@ -1,0 +1,19 @@
+{# Vianney #}
+{% extends 'base.html.twig' %}
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+    {{ form_start(form) }}{# dire que l'on affiche un formulaire #}
+
+        {{ form_row(form.nom) }}{# afficher le champ nom #}
+        {{ form_row(form.prenom) }}
+        {{ form_row(form.date_de_naissance) }}
+        {{ form_row(form.mail) }}
+        {{ form_row(form.mail_upec) }}
+        {{ form_row(form.statut) }}
+        
+        <button type="submit" class="btn btn-primary">valider</button>
+
+    {{ form_end(form) }}
+
+{% endblock %}

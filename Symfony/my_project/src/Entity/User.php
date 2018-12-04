@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
@@ -18,9 +20,16 @@ class User implements UserInterface
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=180, unique=true)
+     * @ORM\Column(type="string", length=150, unique=true)
+     * @Assert\Email(message = "mail invalide")
      */
-    private $email;
+    private $mail;
+
+    /**
+     * @ORM\Column(type="string", length=150, unique=true)
+     * @Assert\Email(message = "mail invalide", checkMX = true))
+     */
+    private $mail_upec;
 
     /**
      * @ORM\Column(type="json")
@@ -32,23 +41,111 @@ class User implements UserInterface
      * @ORM\Column(type="string")
      */
     private $password;
+    
+     /**
+      * @ORM\Column(type="string", length=50)
+      * @Assert\Length(max = 50, maxMessage = "Nom trop long")
+     */
+    private $nom;
+    
+    /**
+     * @ORM\Column(type="string", length=50)
+     * @Assert\Length(max = 50, maxMessage = "Prenom trop long")
+     */
+    private $prenom;
+    
+    /**
+     * @ORM\Column(name="date_de_naissance", type="/DateTime")
+     */
+    private $date_de_naissance;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $statut;
+
+    
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getEmail(): ?string
+    public function getNom(): ?string
     {
-        return $this->email;
+        return $this->nom;
     }
 
-    public function setEmail(string $email): self
+    public function getPrenom(): ?string
     {
-        $this->email = $email;
+        return $this->prenom;
+    }
+
+    public function getDateDeNaissance(): ?\DateTime
+    {
+        return $this->date_de_naissance;
+    }
+
+    public function getMail(): ?string
+    {
+        return $this->mail;
+    }
+    
+    public function getMailUpec(): ?string
+    {
+        return $this->mail_upec;
+    }
+
+    public function getStatut(): ?string
+    {
+        return $this->statut;
+    }
+
+
+    public function setNom(string $nom): self
+    {
+        $this->nom = $nom;
 
         return $this;
     }
+
+    public function setPrenom(string $prenom): self
+    {
+        $this->prenom = $prenom;
+
+        return $this;
+    }
+
+    public function setDateDeNaissance(\DateTime $date_de_naissance): self
+    {
+        $this->date_de_naissance = $date_de_naissance;
+
+        return $this;
+    }
+
+    public function setMail(string $mail): self
+    {
+        $this->mail = $mail;
+
+        return $this;
+    }
+
+    public function setMailUpec(string $mail_upec): self
+    {
+        $this->mail_upec = $mail_upec;
+
+        return $this;
+    }
+
+    public function setStatut(string $statut): self
+    {
+        $this->statut = $statut;
+
+        return $this;
+    }
+
+
+
 
     /**
      * A visual identifier that represents this user.
