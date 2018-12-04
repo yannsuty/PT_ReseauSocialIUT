@@ -1,3 +1,3 @@
 RewriteEngine On
-RewriteBase /PT_ReseauSocialIUT/Symfony/my_project/public/
+RewriteBase /suty/PT_ReseauSocialIUT/Symfony/my_project/public/
 RewriteRule (.*) index.php [QSA,L]

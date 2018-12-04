@@ -1,0 +1,4 @@
+doctrine:
+    dbal:
+        driver: 'pdo_pgsql'
+        charset: utf8mb4
