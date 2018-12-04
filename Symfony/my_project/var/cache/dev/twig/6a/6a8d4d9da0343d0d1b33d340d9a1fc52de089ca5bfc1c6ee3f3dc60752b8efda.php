@@ -49,16 +49,55 @@ class __TwigTemplate_849b6403b4620a2eac43fbd8bfb777882d09787020cc90b8da7466e7d8a
         echo "    
     </head>
     <body>
+        <div id=\"headerHaut\">
+    \t    <div id=\"logo_site\" class=\"divhead\">
+    \t    \t<img id=\"logosite\" src=\"image/logo.png\" alt=\"logo\">
+\t        </div>
+        \t<div id=\"connexion\" class=\"divhead\">
+\t        \t<div id=\"connexion2\">
+                    ";
+        // line 19
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 19, $this->source); })()), 'form_start');
+        echo "
+                        ";
+        // line 20
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 20, $this->source); })()), "email", array()), 'row');
+        echo "
+                        ";
+        // line 21
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 21, $this->source); })()), "password", array()), 'row');
+        echo "
+                        <input id=\"submit\" class=\"bouton\" type=\"submit\" value=\"connexion\"/>
+                    ";
+        // line 23
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 23, $this->source); })()), 'form_end');
+        echo "
+\t        \t</div>
+        \t</div>
+    \t</div>
+    \t<div id=\"headerBas\">
+\t\t    <div class=\"menu\">
+\t    \t\t<ul>
+    \t\t\t\t<li><a href=\"#\" class=\"active\">Accueil</a></li>
+\t\t\t        \t<li><a href=\"/Forum\" class=\"boutonMenu\">Forum</a></li>
+\t\t    \t\t<li><a href=\"/EmploiDuTemps\" class=\"boutonMenu\">Emploi du temps</a></li>
+\t    \t\t\t<li><a href=\"/News\" class=\"boutonMenu\">News</a></li>
+    \t\t\t\t<li><a href=\"/Aide\" class=\"boutonMenu\">Aide</a></li>
+\t\t\t\t    <input href=\"#\" class=\"barreRech\" name=\"recherche\" type=\"text\" placeholder=\"Rechercher\" required/>
+                    <i class=\"material-icons\">search</i>
+\t\t    \t</ul>
+\t    \t</div>
+    \t</div>
         ";
-        // line 13
+        // line 40
         $this->displayBlock('header', $context, $blocks);
-        // line 14
+        // line 41
         echo "        ";
         $this->displayBlock('body', $context, $blocks);
-        // line 15
+        // line 42
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 16
+        // line 43
         echo "    </body>
 </html>
 ";
@@ -105,7 +144,7 @@ class __TwigTemplate_849b6403b4620a2eac43fbd8bfb777882d09787020cc90b8da7466e7d8a
 
     }
 
-    // line 13
+    // line 40
     public function block_header($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -122,7 +161,7 @@ class __TwigTemplate_849b6403b4620a2eac43fbd8bfb777882d09787020cc90b8da7466e7d8a
 
     }
 
-    // line 14
+    // line 41
     public function block_body($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -139,7 +178,7 @@ class __TwigTemplate_849b6403b4620a2eac43fbd8bfb777882d09787020cc90b8da7466e7d8a
 
     }
 
-    // line 15
+    // line 42
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -161,9 +200,14 @@ class __TwigTemplate_849b6403b4620a2eac43fbd8bfb777882d09787020cc90b8da7466e7d8a
         return "base.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  143 => 15,  126 => 14,  109 => 13,  92 => 10,  74 => 5,  62 => 16,  59 => 15,  56 => 14,  54 => 13,  48 => 10,  40 => 5,  34 => 1,);
+        return array (  182 => 42,  165 => 41,  148 => 40,  131 => 10,  113 => 5,  101 => 43,  98 => 42,  95 => 41,  93 => 40,  73 => 23,  68 => 21,  64 => 20,  60 => 19,  48 => 10,  40 => 5,  34 => 1,);
     }
 
     public function getSourceContext()
@@ -180,6 +224,33 @@ class __TwigTemplate_849b6403b4620a2eac43fbd8bfb777882d09787020cc90b8da7466e7d8a
         {% block stylesheets %}{% endblock %}    
     </head>
     <body>
+        <div id=\"headerHaut\">
+    \t    <div id=\"logo_site\" class=\"divhead\">
+    \t    \t<img id=\"logosite\" src=\"image/logo.png\" alt=\"logo\">
+\t        </div>
+        \t<div id=\"connexion\" class=\"divhead\">
+\t        \t<div id=\"connexion2\">
+                    {{ form_start(form) }}
+                        {{ form_row(form.email) }}
+                        {{ form_row(form.password) }}
+                        <input id=\"submit\" class=\"bouton\" type=\"submit\" value=\"connexion\"/>
+                    {{ form_end(form) }}
+\t        \t</div>
+        \t</div>
+    \t</div>
+    \t<div id=\"headerBas\">
+\t\t    <div class=\"menu\">
+\t    \t\t<ul>
+    \t\t\t\t<li><a href=\"#\" class=\"active\">Accueil</a></li>
+\t\t\t        \t<li><a href=\"/Forum\" class=\"boutonMenu\">Forum</a></li>
+\t\t    \t\t<li><a href=\"/EmploiDuTemps\" class=\"boutonMenu\">Emploi du temps</a></li>
+\t    \t\t\t<li><a href=\"/News\" class=\"boutonMenu\">News</a></li>
+    \t\t\t\t<li><a href=\"/Aide\" class=\"boutonMenu\">Aide</a></li>
+\t\t\t\t    <input href=\"#\" class=\"barreRech\" name=\"recherche\" type=\"text\" placeholder=\"Rechercher\" required/>
+                    <i class=\"material-icons\">search</i>
+\t\t    \t</ul>
+\t    \t</div>
+    \t</div>
         {% block header %}{% endblock%}
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}

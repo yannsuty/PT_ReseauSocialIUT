@@ -21,8 +21,6 @@ class srcDevDebugProjectContainerUrlGenerator extends Symfony\Component\Routing\
         if (null === self::$declaredRoutes) {
             self::$declaredRoutes = array(
         'app_accueil_index' => array(array(), array('_controller' => 'App\\Controller\\AccueilController::index'), array(), array(array('text', '/')), array(), array()),
-        'app_accueil_connexion' => array(array(), array('_controller' => 'App\\Controller\\AccueilController::connexion'), array(), array(array('text', '/connexion')), array(), array()),
-        'index' => array(array(), array('_controller' => 'App\\Controller\\IndexController::index'), array(), array(array('text', '/')), array(), array()),
         '_twig_error_test' => array(array('code', '_format'), array('_controller' => 'twig.controller.preview_error::previewErrorPageAction', '_format' => 'html'), array('code' => '\\d+'), array(array('variable', '.', '[^/]++', '_format'), array('variable', '/', '\\d+', 'code'), array('text', '/_error')), array(), array()),
         '_wdt' => array(array('token'), array('_controller' => 'web_profiler.controller.profiler::toolbarAction'), array(), array(array('variable', '/', '[^/]++', 'token'), array('text', '/_wdt')), array(), array()),
         '_profiler_home' => array(array(), array('_controller' => 'web_profiler.controller.profiler::homeAction'), array(), array(array('text', '/_profiler/')), array(), array()),
@@ -35,6 +33,8 @@ class srcDevDebugProjectContainerUrlGenerator extends Symfony\Component\Routing\
         '_profiler_router' => array(array('token'), array('_controller' => 'web_profiler.controller.router::panelAction'), array(), array(array('text', '/router'), array('variable', '/', '[^/]++', 'token'), array('text', '/_profiler')), array(), array()),
         '_profiler_exception' => array(array('token'), array('_controller' => 'web_profiler.controller.exception::showAction'), array(), array(array('text', '/exception'), array('variable', '/', '[^/]++', 'token'), array('text', '/_profiler')), array(), array()),
         '_profiler_exception_css' => array(array('token'), array('_controller' => 'web_profiler.controller.exception::cssAction'), array(), array(array('text', '/exception.css'), array('variable', '/', '[^/]++', 'token'), array('text', '/_profiler')), array(), array()),
+        'index' => array(array(), array('_controller' => 'App\\Controller\\AccueilController::index'), array(), array(array('text', '/')), array(), array()),
+        'connexion' => array(array(), array('_controller' => 'App\\Controller\\AccueilController::connexion'), array(), array(array('text', '/connexion')), array(), array()),
     );
         }
     }
