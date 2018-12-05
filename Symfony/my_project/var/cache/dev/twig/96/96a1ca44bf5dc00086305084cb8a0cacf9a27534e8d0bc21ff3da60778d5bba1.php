@@ -59,7 +59,7 @@ class __TwigTemplate_ec04ef3229549a7fbaabad2984a9c95c15dc272536cfa0615de105ba42c
 
     }
 
-    // line 4
+    // line 5
     public function block_body($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -68,7 +68,7 @@ class __TwigTemplate_ec04ef3229549a7fbaabad2984a9c95c15dc272536cfa0615de105ba42c
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 5
+        // line 6
         echo "<div id=\"corps-site\">
     <div class=\"contenu-sect\">
         <article>
@@ -106,7 +106,7 @@ class __TwigTemplate_ec04ef3229549a7fbaabad2984a9c95c15dc272536cfa0615de105ba42c
 
     public function getDebugInfo()
     {
-        return array (  72 => 5,  63 => 4,  45 => 3,  15 => 1,);
+        return array (  72 => 6,  63 => 5,  45 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -114,6 +114,7 @@ class __TwigTemplate_ec04ef3229549a7fbaabad2984a9c95c15dc272536cfa0615de105ba42c
         return new Twig_Source("{% extends 'base.html.twig' %}{#recupere base html head, body#}
 
 {% block title %}Hello !{% endblock %}{#titre#}
+
 {% block body %}
 <div id=\"corps-site\">
     <div class=\"contenu-sect\">
@@ -132,6 +133,6 @@ class __TwigTemplate_ec04ef3229549a7fbaabad2984a9c95c15dc272536cfa0615de105ba42c
     </div>
 </div>
 {% endblock %}
-", "accueil/index.html.twig", "/home/eureka/www/suty/PT_ReseauSocialIUT/Symfony/my_project/templates/accueil/index.html.twig");
+", "accueil/index.html.twig", "/home/eureka/www/PT_ReseauSocialIUT/Symfony/my_project/templates/accueil/index.html.twig");
     }
 }

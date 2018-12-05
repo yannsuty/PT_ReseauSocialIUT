@@ -61,7 +61,7 @@ class __TwigTemplate_849b6403b4620a2eac43fbd8bfb777882d09787020cc90b8da7466e7d8a
         echo "
                         ";
         // line 20
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 20, $this->source); })()), "email", array()), 'row');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 20, $this->source); })()), "mail", array()), 'row');
         echo "
                         ";
         // line 21
@@ -231,7 +231,7 @@ class __TwigTemplate_849b6403b4620a2eac43fbd8bfb777882d09787020cc90b8da7466e7d8a
         \t<div id=\"connexion\" class=\"divhead\">
 \t        \t<div id=\"connexion2\">
                     {{ form_start(form) }}
-                        {{ form_row(form.email) }}
+                        {{ form_row(form.mail) }}
                         {{ form_row(form.password) }}
                         <input id=\"submit\" class=\"bouton\" type=\"submit\" value=\"connexion\"/>
                     {{ form_end(form) }}
@@ -256,6 +256,6 @@ class __TwigTemplate_849b6403b4620a2eac43fbd8bfb777882d09787020cc90b8da7466e7d8a
         {% block javascripts %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "/home/eureka/www/suty/PT_ReseauSocialIUT/Symfony/my_project/templates/base.html.twig");
+", "base.html.twig", "/home/eureka/www/PT_ReseauSocialIUT/Symfony/my_project/templates/base.html.twig");
     }
 }
