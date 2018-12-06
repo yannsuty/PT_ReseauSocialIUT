@@ -14,6 +14,9 @@ header{
 	justify-content: space-between;
 }
 
+#logo_site{
+    padding-left: 5%;
+}
 #logosite{
 	width:244px;
 	display: inline-block;
@@ -24,12 +27,14 @@ header{
 
 	display: inline-block;
 	margin: 10px 15px 10px 0px;
+    padding-right: 5%;
 }
 
 /*		partie: BARRE DE MENU + RECHERCHE		*/
 
 .menu {
-	background-color: #e42535;
+	padding: 0% 5% 0% 5%;
+    background-color: #e42535;
 	position: relative;
 }
 
