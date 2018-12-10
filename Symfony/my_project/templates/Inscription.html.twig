@@ -1,9 +1,16 @@
 {# Vianney #}
 {% extends 'base.html.twig' %}
 {% block title %}Inscription{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="../assets/css/form.css">
+{% endblock %}
 
 {% block body %}
-    {{ form_start(form) }}{# dire que l'on affiche un formulaire #}
+    <h1>Inscription</h1>
+
+    <p>Afin de participer au forum étudiant Eureka, il est nécessaire de vous inscrire. Pour cela, merci de bien vouloir remplir les champs suivants.</p>
+
+    {{ form_start(form, {'method':'POST'}) }}{# dire que l'on affiche un formulaire #}
 
         {{ form_row(form.nom) }}{# afficher le champ nom #}
         {{ form_row(form.prenom) }}
@@ -12,7 +19,7 @@
         {{ form_row(form.mail_upec) }}
         {{ form_row(form.statut) }}
         
-        <button type="submit" class="btn btn-primary">valider</button>
+        <button type="submit" class="btn btn-primary" id="valider_bouton "  >Valider</button>
 
     {{ form_end(form) }}
 

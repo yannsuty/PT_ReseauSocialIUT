@@ -16,14 +16,18 @@ class InscriptionController extends AbstractController
      */
     public function inscription(Request $request)
     {
-       
-        $form = $this->createForm(Inscription::class);
+        $user = new User();
+        $form = $this->createForm(Inscription::class,$user);
 
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid())
         {
-            echo "inscription réussi";
+            echo "inscription réussi"; 
+            echo $user->getStatut();
+            $em=$this->getDoctrine()->getManager();
+            $em->persist($user);
+            $em->flush();#convertie la requete en sql
         }
 
         return $this->render('Inscription.html.twig', array(

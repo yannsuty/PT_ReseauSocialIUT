@@ -5,6 +5,7 @@ namespace Doctrine\Bundle\DoctrineBundle;
 use Doctrine\Bundle\DoctrineBundle\DependencyInjection\Compiler\EntityListenerPass;
 use Doctrine\Bundle\DoctrineBundle\DependencyInjection\Compiler\ServiceRepositoryCompilerPass;
 use Doctrine\Common\Util\ClassUtils;
+use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Proxy\Autoloader;
 use Symfony\Bridge\Doctrine\DependencyInjection\CompilerPass\DoctrineValidationPass;
 use Symfony\Bridge\Doctrine\DependencyInjection\CompilerPass\RegisterEventListenersAndSubscribersPass;
@@ -59,13 +60,13 @@ class DoctrineBundle extends Bundle
             // See https://github.com/symfony/symfony/pull/3419 for usage of references
             $container = &$this->container;
 
-            $proxyGenerator = function ($proxyDir, $proxyNamespace, $class) use (&$container) {
+            $proxyGenerator = static function ($proxyDir, $proxyNamespace, $class) use (&$container) {
                 $originalClassName = ClassUtils::getRealClass($class);
                 /** @var Registry $registry */
                 $registry = $container->get('doctrine');
 
                 // Tries to auto-generate the proxy file
-                /** @var $em \Doctrine\ORM\EntityManager */
+                /** @var EntityManager $em */
                 foreach ($registry->getManagers() as $em) {
                     if (! $em->getConfiguration()->getAutoGenerateProxyClasses()) {
                         continue;

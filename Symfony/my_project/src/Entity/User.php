@@ -9,6 +9,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @ORM\Table(name="eureka_user")
  */
 class User implements UserInterface
 {
@@ -32,13 +33,13 @@ class User implements UserInterface
     private $mail_upec;
 
     /**
-     * @ORM\Column(type="json")
+     * @ORM\Column(type="json",nullable=true)
      */
     private $roles = [];
 
     /**
      * @var string The hashed password
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", name="mdp")
      */
     private $password;
     
@@ -55,12 +56,12 @@ class User implements UserInterface
     private $prenom;
     
     /**
-     * @ORM\Column(name="date_de_naissance", type="/DateTime")
+     * @ORM\Column(name="datenaiss", type="date",nullable=true)
      */
     private $date_de_naissance;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $statut;
 
@@ -116,7 +117,7 @@ class User implements UserInterface
         return $this;
     }
 
-    public function setDateDeNaissance(\DateTime $date_de_naissance): self
+    public function setDateDeNaissance(\DateTime $date_de_naissance = null): self
     {
         $this->date_de_naissance = $date_de_naissance;
 
