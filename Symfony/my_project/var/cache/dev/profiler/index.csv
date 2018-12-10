@@ -401,6 +401,7 @@ fa0f6e,2a01:729:b9:0:5054:ff:feb0:6ea8,POST,http://eureka.alwaysdata.net/demarqu
 7bb9a4,2a01:729:b9:0:5054:ff:feb0:6ea8,POST,http://eureka.alwaysdata.net/demarquet/PT_ReseauSocialIUT/Symfony/my_project/public/inscription,1543858128,,200
 1cfb4c,2a01:729:b9:0:5054:ff:feb0:6ea8,POST,http://eureka.alwaysdata.net/demarquet/PT_ReseauSocialIUT/Symfony/my_project/public/inscription,1543858160,,200
 f46a03,37.164.27.241,GET,http://eureka.alwaysdata.net/demarquet/PT_ReseauSocialIUT/Symfony/my_project/public/inscription,1543860031,,200
+<<<<<<< HEAD
 647649,2a04:cec0:1009:9110:61d7:eec0:696a:c99a,GET,http://eureka.alwaysdata.net/demarquet/PT_ReseauSocialIUT/Symfony/my_project/public/inscription,1543909035,,200
 5836ae,2a01:729:b9:0:5054:ff:feb0:6ea8,GET,http://eureka.alwaysdata.net/demarquet/PT_ReseauSocialIUT/Symfony/my_project/public/,1544003287,,200
 9d574d,2a01:729:b9:0:5054:ff:feb0:6ea8,GET,http://eureka.alwaysdata.net/demarquet/PT_ReseauSocialIUT/Symfony/my_project/public/image/logo.png,1544003287,e6be91,200
@@ -698,3 +699,11 @@ f10c86,92.103.151.58,POST,http://eureka.alwaysdata.net/demarquet/PT_ReseauSocial
 4c9a13,92.103.151.58,GET,http://eureka.alwaysdata.net/demarquet/PT_ReseauSocialIUT/Symfony/my_project/public/inscription,1544469331,,200
 67a5ff,92.103.151.58,GET,http://eureka.alwaysdata.net/demarquet/PT_ReseauSocialIUT/Symfony/my_project/public/inscription,1544469347,737fcc,200
 737fcc,92.103.151.58,POST,http://eureka.alwaysdata.net/demarquet/PT_ReseauSocialIUT/Symfony/my_project/public/inscription,1544469347,,500
+=======
+e0d7e3,2a01:729:b9:0:5054:ff:feb0:6ea8,GET,http://eureka.alwaysdata.net/PT_ReseauSocialIUT/Symfony/my_project/public/,1543925462,,200
+e161a2,2a01:729:b9:0:5054:ff:feb0:6ea8,GET,http://eureka.alwaysdata.net/PT_ReseauSocialIUT/Symfony/my_project/public/inscription,1543925744,,200
+5cc007,2a01:729:b9:0:5054:ff:feb0:6ea8,GET,http://eureka.alwaysdata.net/PT_ReseauSocialIUT/Symfony/my_project/public/inscription,1543925785,,200
+d8a310,2a01:729:b9:0:5054:ff:feb0:6ea8,GET,http://eureka.alwaysdata.net/PT_ReseauSocialIUT/Symfony/my_project/public/,1543925789,,200
+fd5cd0,2a01:729:b9:0:5054:ff:feb0:6ea8,GET,http://eureka.alwaysdata.net/PT_ReseauSocialIUT/Symfony/my_project/public/image/logo.png,1543925789,216e6a,200
+216e6a,2a01:729:b9:0:5054:ff:feb0:6ea8,GET,http://eureka.alwaysdata.net/PT_ReseauSocialIUT/Symfony/my_project/public/image/logo.png,1543925789,,404
+>>>>>>> b52c94f79682128297395c42b433f8eb58d07252
