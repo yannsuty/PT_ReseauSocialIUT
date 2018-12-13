@@ -66,7 +66,7 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 // accueil
                 return array('_route' => 'accueil', '_controller' => 'App\\Controller\\AccueilController::index');
                 // index
-                return array('_route' => 'index', '_controller' => 'App\\Controller\\IndexController::index');
+                return array('_route' => 'index', '_controller' => 'App\\Controller\\AccueilController::index');
                 break;
             default:
                 $routes = array(
