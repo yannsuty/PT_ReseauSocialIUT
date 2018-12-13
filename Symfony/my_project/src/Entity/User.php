@@ -6,10 +6,14 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @ORM\Entity 
  * @ORM\Table(name="eureka_user")
+ *
+ * @UniqueEntity(fields="mail", message="le mail est deja utilise")
+ * @UniqueEntity(fields="mail_upec", message="le mail est deja utilise")
  */
 class User implements UserInterface
 {
@@ -28,7 +32,7 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=150, unique=true)
-     * @Assert\Email(message = "mail invalide", checkMX = true))
+     * @Assert\Email(message = "mail invalide"))
      */
     private $mail_upec;
 
@@ -39,7 +43,7 @@ class User implements UserInterface
 
     /**
      * @var string The hashed password
-     * @ORM\Column(type="string", name="mdp")
+     * @ORM\Column(type="string", name="mdp",nullable=true)
      */
     private $password;
     

@@ -11,7 +11,8 @@
     <p>Afin de participer au forum étudiant Eureka, il est nécessaire de vous inscrire. Pour cela, merci de bien vouloir remplir les champs suivants.</p>
 
     {{ form_start(form, {'method':'POST'}) }}{# dire que l'on affiche un formulaire #}
-
+        
+        <p class="chp_obli">Les champs indiqués par une * sont obligatoires.</p>
         {{ form_row(form.nom) }}{# afficher le champ nom #}
         {{ form_row(form.prenom) }}
         {{ form_row(form.date_de_naissance) }}

@@ -20,7 +20,7 @@ class Inscription extends AbstractType
             ->add('prenom', TextType::class)
             ->add('date_de_naissance', DateType::class, array('widget' => 'single_text', 'format' => 'yyyy-MM-dd','required' => false))
             ->add('mail', EmailType::class)
-            ->add('mail_upec', EmailType::class, array('required' => false,'help' => "Mail fournis par l'upec"))
+            ->add('mail_upec', EmailType::class, array('required' => false))
             ->add('statut', ChoiceType::class, array('required' => false, 'placeholder' => false, 
                     'choices' => array(
                         'statut' => null,
