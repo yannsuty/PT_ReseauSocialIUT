@@ -1,0 +1,3 @@
+#index:
+#    path: /
+#    Controllerntroller: App\Controller\AccueilController::index
