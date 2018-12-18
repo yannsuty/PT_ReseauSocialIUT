@@ -1,0 +1,131 @@
+<!-- 
+    Forum du site Eureka
+    Auteurs : Elric Launay
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Forum Eureka</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="forum.css">
+        <script type="text/javascript">
+            var a=1;
+            function accordion(elem){
+                if(a==1)
+                    elem.parentElement.getElementsByTagName("UL")[0].style.display ="none";  
+                else
+                    elem.parentElement.getElementsByTagName("UL")[0].style.display ="block";
+                a=(a+1)%2;
+            }
+            function toggleBell(el){
+                if(el.className == "fas fa-bell"){
+                    el.className = "fas fa-bell-slash";
+                }else if(el.className == "fas fa-bell-slash"){
+                    el.className = "fas fa-bell";
+                }
+            }
+            function toggleStar(el){
+                if(el.textContent== "star_border"){
+                	el.textContent= "star"; 
+                }else if(el.textContent== "star"){
+                	el.textContent= "star_border";
+                }                 
+            }  
+        </script>
+    </head>
+        <div id="left-menu">
+            <div id="recherche-container">
+                <form action="/action_page.php">
+                    <input type="text" placeholder="Rechercher.." name="rechercher">
+                    <button type="submit">Submit</button>
+                </form>
+            <div id="accordion">
+                <ul>
+                    <li>
+                        <a href="">Sujets favoris</a>
+                    </li>
+                    <li>
+                        <a href="">Derniers messages</a>
+                    </li>
+                    <li class="accordion-section">
+                        <div onclick="accordion(this)">Informatique</div>
+                        <ul>
+                            <li>
+                                APL
+                            </li>
+                            <li>
+                                ASR
+                            </li>
+                            <li>
+                                ACDA
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="accordion-section">
+                        <div onclick="accordion(this)">GEA</div>
+                        <ul>
+                            <li>
+                                APL
+                            </li>
+                            <li>
+                                ASR
+                            </li>
+                            <li>
+                                ACDA
+                            </li>
+                        </ul>
+                        
+                    </li>
+                    <li class="accordion-section">
+                        <div onclick="accordion(this)">TC</div>
+                        <ul>
+                            <li>
+                                APL
+                            </li>
+                            <li>
+                                ASR
+                            </li>
+                            <li>
+                                ACDA
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        <div id="right-forum-content">
+            <div class="sous_sujet">
+                <h1>titre sous sujet 1</h1>
+                <h2>Created by {#JS ici la genre par la, ici en faite#}</h2>
+                <i id="modifier_cloche" class='fas fa-bell' style='font-size:36px' onclick="toggleBell(this);""></i>
+                <i class="material-icons" style="font-size:36px" onclick="toggleStar(this);">star_border</i>
+                <p>Contenu: fzhferui guierhguierhgujerjkghuerhgjkerh  jehgkjeh uguehgjk  kghegjerjkghgj</p>
+            </div>
+            <div class="sous_sujet">
+                <h1>titre sous sujet 1</h1>
+                <h2>Created by {#JS ici la genre par la, ici en faite#}</h2>
+                <i id="modifier_cloche" class='fas fa-bell' style='font-size:36px' onclick="toggleBell(this);""></i>
+                <i class="material-icons" style='font-size:36px' onclick="toggleStar(this);">star_border</i>
+                <p>Contenu: fzhferui guierhguierhgujerjkghuerhgjkerh  jehgkjeh uguehgjk  kghegjerjkghgj</p>
+            </div>
+            <div class="sous_sujet">
+                <h1>titre sous sujet 1</h1>
+                <h2>Created by {#JS ici la genre par la, ici en faite#}</h2>
+                <i id="modifier_cloche" class='fas fa-bell' style='font-size:36px' onclick="toggleBell(this);""></i>
+                <i class="material-icons" style="font-size:36px" onclick="toggleStar(this);">star_border</i>
+                <p>Contenu: fzhferui guierhguierhgujerjkghuerhgjkerh  jehgkjeh uguehgjk  kghegjerjkghgj</p>
+            </div>
+            <div class="sous_sujet">
+                <h1>titre sous sujet 1</h1>
+                <h2>Created by {#JS ici la genre par la, ici en faite#}</h2>
+                <i id="modifier_cloche" class='fas fa-bell' style='font-size:36px' onclick="toggleBell(this);""></i>
+                <i class="material-icons" style="font-size:36px" onclick="toggleStar(this);">star_border</i>
+                <p>Contenu: fzhferui guierhguierhgujerjkghuerhgjkerh  jehgkjeh uguehgjk  kghegjerjkghgj</p>
+            </div>
+        </div>
+</html>

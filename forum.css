@@ -1,0 +1,73 @@
+/*
+Charte graphique de l’UPEC
+Couleur insitutionnelle UPEC : rgb(224,0,52)
+Couleurs secondaires :
+Gris clair: rgb(203,199,191)
+Gris: rgb(148,157,158)
+PANTONE 430
+C33-M18-J13-N40
+R129 V138 B143 PANTONE 7545
+C56-M30-J17-N52
+R81 V98 B111
+PANTONE 5275
+C74-M68-J7-N31
+R85 V81 B123 PANTONE 3155
+C100-M10-J28-N47
+R0 V103 B120
+PANTONE 3035
+C100-M27-J10-N58
+R0 V65 B83 PANTONE 447
+C50-M30-J40-N90
+R53 V55 B53
+PANTONE 1375C
+C0-M51-J94-N0
+R225 V160 B47 PANTONE 166
+C0-M78-J100-N0
+R224 V825 B6
+PANTONE 212
+C0-M78-J8-N0
+R240 V77 B152 PANTONE 123
+C0-M19-J89-N0
+R253 V200 B47
+*/
+html{
+	
+}
+body{
+	margin:0;
+}
+
+body #left-menu{
+	color:white;
+}
+#left-menu{
+	float:left;
+	width: 20%;
+	background-color: rgb(224,0,52);
+}
+#left-menu a:link{
+	text-decoration: none;
+	color:white;
+}
+
+#left-menu a:visited{
+	text-decoration: none;
+	color:white;
+}
+#left-menu a:hover{
+	text-decoration: underline;
+}
+#left-menu a:active{
+	text-decoration: underline;
+}
+ul{
+	
+}
+
+#right-forum-content{
+	margin-left: 30%;
+	background: #f2f2f2;
+}
+
+/*fhejbferf
+fzehbfzef*/
