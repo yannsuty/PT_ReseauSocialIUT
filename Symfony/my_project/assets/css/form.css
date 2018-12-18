@@ -1,0 +1,54 @@
+form {
+    width:45%;
+    padding:25px;
+    background-color:#f2f2f2;
+    margin:auto;
+    box-shadow: 10px 10px 20px gray;
+}
+
+label {
+    font-family: "Arial";
+    font-size: 16px;
+    width:20%;
+    display:block;
+    color: #202020;
+}
+
+input {
+    width:60%;
+}
+#valider_bouton\ {
+    
+    background-color:red;
+    border-radius:4px;
+    color:white;
+    border:none;
+    padding:3px;
+    width:20%;
+    margin-top:15px;
+}
+
+#valider_bouton\ :hover {
+    cursor:pointer;
+    background-color:#cc0000;
+}
+
+form div {
+    padding:5px;
+}
+
+.chp_obli {
+    font-size:10px;
+    text-align:right;
+}
+
+li {
+    color:red;
+    font-family:"Arial";
+}
+
+li:before {
+    content:"ATTENTION !  ";
+    font-weight:bold;
+    font-family:"Arial";
+}
