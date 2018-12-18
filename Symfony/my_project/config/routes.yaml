@@ -1,7 +1,0 @@
-index:
-    path: /
-    controller: App\Controller\AccueilController::index
-
-connexion:
-   path: /connexion
-   controller: App\Controller\AccueilController::connexion
