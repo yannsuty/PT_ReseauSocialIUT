@@ -34,7 +34,8 @@ html{
 	margin: 0;
 }
 body{
-	margin:0;
+	width:90%;
+	margin:auto;
 	font: 700 1em "cabin", Arial, "Helvetica Neue", Helvetica, "Bitstream Vera Sans", sans-serif;
 }
 
@@ -44,6 +45,9 @@ body #left-menu{
 	position: fixed;
 	font-size: 0.813em;
 	letter-spacing: 0.05em;
+/*	margin-left: 5%;
+	margin-top:5%;
+	margin-bottom: 5%;*/
 	font: 700 1em "cabin", Arial, "Helvetica Neue", Helvetica, "Bitstream Vera Sans", sans-serif;
 }
 div #accordion {
@@ -60,7 +64,7 @@ div #accordion {
 	top:0;
 	bottom:0;
 	width: 20%;
-	background-color: rgb(224,0,52);
+	background-color: #e42535;
 }
 #left-menu a:link{
 	text-decoration: none;
@@ -103,21 +107,24 @@ li{
 #right-forum-content h2 {
 	display: inline;
 	font-style: italic;
+	padding-left: 5%;
 }
 #right-forum-content i{
 	float:right;
+	color: #4a5f70;
 }
 
 .sous_sujet{
 	padding: 2%;
-	border:black;
+	border-bottom: 5px solid #e42535;
 }
 
 .sous_sujet p{
 	padding-left: 3%;
+	margin-top: 2%
 }
 div:hover.sous_sujet {
-	background-color: rgb(224,0,52);
+	background-color: #e42535;
 	color:white;
 }
 #recherche-container {
@@ -128,15 +135,17 @@ div:hover.sous_sujet {
 #recherche-container button {
 	margin:5%;
 	width:20%;
+	border: 0;
 	min-height:4vh;
-	background-color: #f2f2f2;
-	border: 2px solid rgb(224,0,52);
-	color:black;
+	background-color:#e42535;
+	color:white;
+	cursor: pointer;
 }
 #recherche-container input {
 	width: 60%;
-	border: 2px solid rgb(224,0,52);
+	border: 0;
+	color:white;
 	min-height:4vh;
-	background-color: #f2f2f2;
-	color:black;
+	background-color:#e42535;
+	font: 700 1em "cabin", Arial, "Helvetica Neue", Helvetica, "Bitstream Vera Sans", sans-serif;
 }
