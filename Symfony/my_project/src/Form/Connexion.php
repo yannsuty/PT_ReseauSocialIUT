@@ -14,7 +14,6 @@ class Connexion extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder #créé les champs
-
             ->add('mail', EmailType::class, array('label' => "Email*"))
             ->add('password', PasswordType::class, array('label' => "Mot de passe*"));
     }

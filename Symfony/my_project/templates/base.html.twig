@@ -11,30 +11,22 @@
     <body>
         <header>
         <div id="headerHaut">
-
-    	    <div id="logo_site" class="divhead">
-    	    	<img id="logosite" src="image/logo.png" alt="logo">
-	        </div>
-        	<div id="connexion" class="divhead">
-	        	<div id="connexion2">
-                    {{ form_start(form) }}
-                        {{ form_row(form.mail) }}
-                        {{ form_row(form.password) }}
-                        <input id="submit" class="bouton" type="submit" value="connexion"/>
-                    {{ form_end(form) }}
-	        	</div>
-        	</div>
-    	</div>
-    	<div id="headerBas">
-		    <div class="menu">
-	    		<ul>
-    				<li><a href="#" class="active">Accueil</a></li>
-			        	<li><a href="/Forum" class="boutonMenu">Forum</a></li>
-		    		<li><a href="/EmploiDuTemps" class="boutonMenu">Emploi du temps</a></li>
-	    			<li><a href="/News" class="boutonMenu">News</a></li>
-    				<li><a href="/Aide" class="boutonMenu">Aide</a></li>
-				    <input href="#" class="barreRech" name="recherche" type="text" placeholder="Rechercher" required/>
-
+            <div id="logo_site" class="divhead">
+                <img id="logosite" src="image/logo.png" alt="logo">
+            </div>
+            <div id="connexion" class="divhead">
+                
+            </div>
+    </div>
+        <div id="headerBas">
+            <div class="menu">
+                <ul>
+                    <li><a href="#" class="active">Accueil</a></li>
+                    <li><a href="/Forum" class="boutonMenu">Forum</a></li>
+                    <li><a href="/EmploiDuTemps" class="boutonMenu">Emploi du temps</a></li>
+                    <li><a href="/News" class="boutonMenu">News</a></li>
+                    <li><a href="/Aide" class="boutonMenu">Aide</a></li>
+                    <input href="#" class="barreRech" name="recherche" type="text" placeholder="Rechercher" required/>
                     <i class="material-icons">search</i>
                 </ul>
             </div>
