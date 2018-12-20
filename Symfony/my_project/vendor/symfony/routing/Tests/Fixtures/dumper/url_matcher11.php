@@ -50,7 +50,7 @@ class ProjectUrlMatcher extends Symfony\Component\Routing\Tests\Fixtures\Redirec
         throw new ResourceNotFoundException();
     }
 
-    private function doMatch(string $rawPathinfo, array &$allow = array(), array &$allowSchemes = array()): ?array
+    private function doMatch(string $rawPathinfo, array &$allow = array(), array &$allowSchemes = array()): array
     {
         $allow = $allowSchemes = array();
         $pathinfo = rawurldecode($rawPathinfo) ?: '/';
@@ -118,8 +118,21 @@ class ProjectUrlMatcher extends Symfony\Component\Routing\Tests\Fixtures\Redirec
 
                         list($ret, $vars, $requiredMethods, $requiredSchemes, $hasTrailingSlash) = $routes[$m];
 
-                        if ('/' !== $pathinfo && $hasTrailingSlash !== ('/' === $pathinfo[-1])) {
-                            return null;
+                        if ('/' !== $pathinfo) {
+                            if ('/' === $pathinfo[-1]) {
+                                if (preg_match($regex, substr($pathinfo, 0, -1), $n) && $m === (int) $n['MARK']) {
+                                    $matches = $n;
+                                } else {
+                                    $hasTrailingSlash = true;
+                                }
+                            }
+
+                            if ($hasTrailingSlash !== ('/' === $pathinfo[-1])) {
+                                if ((!$requiredMethods || isset($requiredMethods['GET'])) && 'GET' === $canonicalMethod) {
+                                    return $allow = $allowSchemes = array();
+                                }
+                                break;
+                            }
                         }
 
                         foreach ($vars as $i => $v) {
@@ -154,6 +167,6 @@ class ProjectUrlMatcher extends Symfony\Component\Routing\Tests\Fixtures\Redirec
             throw new Symfony\Component\Routing\Exception\NoConfigurationException();
         }
 
-        return null;
+        return array();
     }
 }

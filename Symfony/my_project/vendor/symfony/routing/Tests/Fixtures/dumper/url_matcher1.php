@@ -54,8 +54,10 @@ class ProjectUrlMatcher extends Symfony\Component\Routing\Matcher\UrlMatcher
                 }
                 list($ret, $requiredHost, $requiredMethods, $requiredSchemes, $hasTrailingSlash) = $routes[$trimmedPathinfo];
 
-                if ('/' !== $pathinfo && $hasTrailingSlash !== ('/' === $pathinfo[-1])) {
-                    break;
+                if ('/' !== $pathinfo) {
+                    if ($hasTrailingSlash !== ('/' === $pathinfo[-1])) {
+                        break;
+                    }
                 }
 
                 if ($requiredHost) {
@@ -140,15 +142,24 @@ class ProjectUrlMatcher extends Symfony\Component\Routing\Matcher\UrlMatcher
                         $matches = array('foo' => $matches[1] ?? null);
 
                         // baz4
-                        if ('/' !== $pathinfo && '/' !== $pathinfo[-1]) {
-                            break;
+                        if ('/' !== $pathinfo[-1]) {
+                            goto not_baz4;
                         }
+                        if ('/' !== $pathinfo && preg_match($regex, substr($pathinfo, 0, -1), $n) && $m === (int) $n['MARK']) {
+                            $matches = $n;
+                        }
+
                         return $this->mergeDefaults(array('_route' => 'baz4') + $matches, array());
+                        not_baz4:
 
                         // baz5
-                        if ('/' !== $pathinfo && '/' !== $pathinfo[-1]) {
-                            break;
+                        if ('/' !== $pathinfo[-1]) {
+                            goto not_baz5;
                         }
+                        if ('/' !== $pathinfo && preg_match($regex, substr($pathinfo, 0, -1), $n) && $m === (int) $n['MARK']) {
+                            $matches = $n;
+                        }
+
                         $ret = $this->mergeDefaults(array('_route' => 'baz5') + $matches, array());
                         if (!isset(($a = array('POST' => 0))[$requestMethod])) {
                             $allow += $a;
@@ -159,9 +170,13 @@ class ProjectUrlMatcher extends Symfony\Component\Routing\Matcher\UrlMatcher
                         not_baz5:
 
                         // baz.baz6
-                        if ('/' !== $pathinfo && '/' !== $pathinfo[-1]) {
-                            break;
+                        if ('/' !== $pathinfo[-1]) {
+                            goto not_bazbaz6;
                         }
+                        if ('/' !== $pathinfo && preg_match($regex, substr($pathinfo, 0, -1), $n) && $m === (int) $n['MARK']) {
+                            $matches = $n;
+                        }
+
                         $ret = $this->mergeDefaults(array('_route' => 'baz.baz6') + $matches, array());
                         if (!isset(($a = array('PUT' => 0))[$requestMethod])) {
                             $allow += $a;
@@ -176,9 +191,10 @@ class ProjectUrlMatcher extends Symfony\Component\Routing\Matcher\UrlMatcher
                         $matches = array('foo' => $matches[1] ?? null);
 
                         // foo1
-                        if ('/' !== $pathinfo && '/' === $pathinfo[-1]) {
-                            break;
+                        if ('/' !== $pathinfo && '/' === $pathinfo[-1] && preg_match($regex, substr($pathinfo, 0, -1), $n) && $m === (int) $n['MARK']) {
+                            goto not_foo1;
                         }
+
                         $ret = $this->mergeDefaults(array('_route' => 'foo1') + $matches, array());
                         if (!isset(($a = array('PUT' => 0))[$requestMethod])) {
                             $allow += $a;
@@ -193,20 +209,24 @@ class ProjectUrlMatcher extends Symfony\Component\Routing\Matcher\UrlMatcher
                         $matches = array('foo1' => $matches[1] ?? null);
 
                         // foo2
-                        if ('/' !== $pathinfo && '/' === $pathinfo[-1]) {
-                            break;
+                        if ('/' !== $pathinfo && '/' === $pathinfo[-1] && preg_match($regex, substr($pathinfo, 0, -1), $n) && $m === (int) $n['MARK']) {
+                            goto not_foo2;
                         }
+
                         return $this->mergeDefaults(array('_route' => 'foo2') + $matches, array());
+                        not_foo2:
 
                         break;
                     case 279:
                         $matches = array('_locale' => $matches[1] ?? null, 'foo' => $matches[2] ?? null);
 
                         // foo3
-                        if ('/' !== $pathinfo && '/' === $pathinfo[-1]) {
-                            break;
+                        if ('/' !== $pathinfo && '/' === $pathinfo[-1] && preg_match($regex, substr($pathinfo, 0, -1), $n) && $m === (int) $n['MARK']) {
+                            goto not_foo3;
                         }
+
                         return $this->mergeDefaults(array('_route' => 'foo3') + $matches, array());
+                        not_foo3:
 
                         break;
                     default:
@@ -232,8 +252,18 @@ class ProjectUrlMatcher extends Symfony\Component\Routing\Matcher\UrlMatcher
 
                         list($ret, $vars, $requiredMethods, $requiredSchemes, $hasTrailingSlash) = $routes[$m];
 
-                        if ('/' !== $pathinfo && $hasTrailingSlash !== ('/' === $pathinfo[-1])) {
-                            break;
+                        if ('/' !== $pathinfo) {
+                            if ('/' === $pathinfo[-1]) {
+                                if (preg_match($regex, substr($pathinfo, 0, -1), $n) && $m === (int) $n['MARK']) {
+                                    $matches = $n;
+                                } else {
+                                    $hasTrailingSlash = true;
+                                }
+                            }
+
+                            if ($hasTrailingSlash !== ('/' === $pathinfo[-1])) {
+                                break;
+                            }
                         }
 
                         foreach ($vars as $i => $v) {

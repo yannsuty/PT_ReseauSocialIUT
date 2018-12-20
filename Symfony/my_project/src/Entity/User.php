@@ -45,6 +45,11 @@ class User implements UserInterface
      * @var string The hashed password
      * @ORM\Column(type="string", name="mdp",nullable=true)
      */
+    private $hashpassword;
+    
+    /*
+    * @Assert\Length(max=250)
+    */ 
     private $password;
     
      /**
@@ -189,9 +194,21 @@ class User implements UserInterface
         return (string) $this->password;
     }
 
+    public function getHashPassword(): string
+    {
+        return (string) $this->hashpassword;
+    }
+
     public function setPassword(string $password): self
     {
         $this->password = $password;
+
+        return $this;
+    }
+
+    public function setHashPassword(string $hashpassword): self
+    {
+        $this->hashpassword = $hashpassword;
 
         return $this;
     }

@@ -1,3 +1,23 @@
+1.10
+====
+
+* Add `make:serializer:normalizer` command - #298 thanks
+    to @lyrixx
+
+* Add a `--no-template` option to `make:controller` to skip
+    generating a template - #280 thanks to @welcoMattic
+
+* Add support for rendering additional date types in make:crud
+    - #241 thanks to @sadikoff
+
+* Better errors when trying to use reserved words for classes
+    - #306 thanks to @SerkanYildiz
+
+1.9
+===
+
+* Allow make:form to work with non-entities - #301 thanks to @ckrack
+
 1.8
 ===
 

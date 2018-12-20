@@ -1,0 +1,12 @@
+swiftmailer:
+    transport: smtp
+    auth_mode: login
+    host: smtp-eureka.alwaysdata.net
+    username: eureka@alwaysdata.net 
+    password: pt_eureka
+    stream_options:
+        ssl:
+            allow_self_signed: true
+            verify_peer: false
+            verify_peer_name: false
+    spool: { type: memory }
