@@ -15,10 +15,14 @@
         <script type="text/javascript">
             var a=1;
             function accordion(elem){
-                if(a==1)
-                    elem.parentElement.getElementsByTagName("UL")[0].style.display ="none";  
-                else
+                if(a==1){
+                    elem.parentElement.getElementsByTagName("UL")[0].style.display ="none";
+                    elem.getElementsByTagName("i")[0].className ="fas fa-angle-down";
+                }
+                else{
                     elem.parentElement.getElementsByTagName("UL")[0].style.display ="block";
+                    elem.getElementsByTagName("i")[0].className ="fas fa-angle-up";  
+                }
                 a=(a+1)%2;
             }
             function toggleBell(el){
@@ -34,15 +38,16 @@
                 }else if(el.textContent== "star"){
                 	el.textContent= "star_border";
                 }                 
-            }  
+            }
         </script>
     </head>
         <div id="left-menu">
             <div id="recherche-container">
                 <form action="/action_page.php">
-                    <input type="text" placeholder="Rechercher.." name="rechercher">
-                    <button type="submit">Submit</button>
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
+            </div>
             <div id="accordion">
                 <ul>
                     <li>
@@ -52,7 +57,9 @@
                         <a href="">Derniers messages</a>
                     </li>
                     <li class="accordion-section">
-                        <div onclick="accordion(this)">Informatique</div>
+                        <div onclick="accordion(this)">Informatique
+                            <i class='fas fa-angle-up'"></i> 
+                        </div>
                         <ul>
                             <li>
                                 APL
@@ -66,7 +73,9 @@
                         </ul>
                     </li>
                     <li class="accordion-section">
-                        <div onclick="accordion(this)">GEA</div>
+                        <div onclick="accordion(this)">GEA
+                             <i class='fas fa-angle-up'"></i>
+                        </div>
                         <ul>
                             <li>
                                 APL
@@ -81,7 +90,9 @@
                         
                     </li>
                     <li class="accordion-section">
-                        <div onclick="accordion(this)">TC</div>
+                        <div onclick="accordion(this)">TC
+                             <i class='fas fa-angle-up'"></i>
+                        </div>
                         <ul>
                             <li>
                                 APL
@@ -100,32 +111,53 @@
         </div>
         <div id="right-forum-content">
             <div class="sous_sujet">
-                <h1>titre sous sujet 1</h1>
-                <h2>Created by {#JS ici la genre par la, ici en faite#}</h2>
-                <i id="modifier_cloche" class='fas fa-bell' style='font-size:36px' onclick="toggleBell(this);""></i>
+                <h1>Titre sous-sujet N°X</h1>
+                <h2>Created by Elric Launay</h2>
+                <i class='fas fa-bell' style='font-size:36px' onclick="toggleBell(this);""></i>
                 <i class="material-icons" style="font-size:36px" onclick="toggleStar(this);">star_border</i>
-                <p>Contenu: fzhferui guierhguierhgujerjkghuerhgjkerh  jehgkjeh uguehgjk  kghegjerjkghgj</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis tristique sollicitudin nibh sit amet commodo. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Eget nullam non nisi est sit amet facilisis magna etiam. Sed vulputate mi sit amet mauris commodo quis imperdiet massa. Neque vitae tempus quam pellentesque nec nam aliquam. Tristique risus nec feugiat in fermentum posuere urna nec tincidunt. Elementum nisi quis eleifend quam. Curabitur vitae nunc sed velit dignissim sodales. Nullam vehicula ipsum a arcu cursus vitae. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus.</p>
             </div>
             <div class="sous_sujet">
-                <h1>titre sous sujet 1</h1>
-                <h2>Created by {#JS ici la genre par la, ici en faite#}</h2>
-                <i id="modifier_cloche" class='fas fa-bell' style='font-size:36px' onclick="toggleBell(this);""></i>
+                <h1>Titre sous-sujet N°X</h1>
+                <h2>Created by Elric Launay</h2>
+                <i class='fas fa-bell' style='font-size:36px' onclick="toggleBell(this);""></i>
                 <i class="material-icons" style='font-size:36px' onclick="toggleStar(this);">star_border</i>
-                <p>Contenu: fzhferui guierhguierhgujerjkghuerhgjkerh  jehgkjeh uguehgjk  kghegjerjkghgj</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis tristique sollicitudin nibh sit amet commodo. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Eget nullam non nisi est sit amet facilisis magna etiam. Sed vulputate mi sit amet mauris commodo quis imperdiet massa. Neque vitae tempus quam pellentesque nec nam aliquam. Tristique risus nec feugiat in fermentum posuere urna nec tincidunt. Elementum nisi quis eleifend quam. Curabitur vitae nunc sed velit dignissim sodales. Nullam vehicula ipsum a arcu cursus vitae. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus.</p>
             </div>
             <div class="sous_sujet">
-                <h1>titre sous sujet 1</h1>
-                <h2>Created by {#JS ici la genre par la, ici en faite#}</h2>
-                <i id="modifier_cloche" class='fas fa-bell' style='font-size:36px' onclick="toggleBell(this);""></i>
+                <h1>Titre sous-sujet N°X</h1>
+                <h2>Created by Elric Launay</h2>
+                <i class='fas fa-bell' style='font-size:36px' onclick="toggleBell(this);""></i>
                 <i class="material-icons" style="font-size:36px" onclick="toggleStar(this);">star_border</i>
-                <p>Contenu: fzhferui guierhguierhgujerjkghuerhgjkerh  jehgkjeh uguehgjk  kghegjerjkghgj</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis tristique sollicitudin nibh sit amet commodo. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Eget nullam non nisi est sit amet facilisis magna etiam. Sed vulputate mi sit amet mauris commodo quis imperdiet massa. Neque vitae tempus quam pellentesque nec nam aliquam. Tristique risus nec feugiat in fermentum posuere urna nec tincidunt. Elementum nisi quis eleifend quam. Curabitur vitae nunc sed velit dignissim sodales. Nullam vehicula ipsum a arcu cursus vitae. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus.</p>
             </div>
             <div class="sous_sujet">
-                <h1>titre sous sujet 1</h1>
-                <h2>Created by {#JS ici la genre par la, ici en faite#}</h2>
-                <i id="modifier_cloche" class='fas fa-bell' style='font-size:36px' onclick="toggleBell(this);""></i>
+                <h1>Titre sous-sujet N°X</h1>
+                <h2>Created by Elric Launay</h2>
+                <i class='fas fa-bell' style='font-size:36px' onclick="toggleBell(this);""></i>
                 <i class="material-icons" style="font-size:36px" onclick="toggleStar(this);">star_border</i>
-                <p>Contenu: fzhferui guierhguierhgujerjkghuerhgjkerh  jehgkjeh uguehgjk  kghegjerjkghgj</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis tristique sollicitudin nibh sit amet commodo. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Eget nullam non nisi est sit amet facilisis magna etiam. Sed vulputate mi sit amet mauris commodo quis imperdiet massa. Neque vitae tempus quam pellentesque nec nam aliquam. Tristique risus nec feugiat in fermentum posuere urna nec tincidunt. Elementum nisi quis eleifend quam. Curabitur vitae nunc sed velit dignissim sodales. Nullam vehicula ipsum a arcu cursus vitae. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus.</p>
+            </div>
+            <div class="sous_sujet">
+                <h1>Titre sous-sujet N°X</h1>
+                <h2>Created by Elric Launay</h2>
+                <i class='fas fa-bell' style='font-size:36px' onclick="toggleBell(this);""></i>
+                <i class="material-icons" style="font-size:36px" onclick="toggleStar(this);">star_border</i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis tristique sollicitudin nibh sit amet commodo. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Eget nullam non nisi est sit amet facilisis magna etiam. Sed vulputate mi sit amet mauris commodo quis imperdiet massa. Neque vitae tempus quam pellentesque nec nam aliquam. Tristique risus nec feugiat in fermentum posuere urna nec tincidunt. Elementum nisi quis eleifend quam. Curabitur vitae nunc sed velit dignissim sodales. Nullam vehicula ipsum a arcu cursus vitae. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus.</p>
+            </div>
+            <div class="sous_sujet">
+                <h1>Titre sous-sujet N°X</h1>
+                <h2>Created by Elric Launay</h2>
+                <i class='fas fa-bell' style='font-size:36px' onclick="toggleBell(this);""></i>
+                <i class="material-icons" style="font-size:36px" onclick="toggleStar(this);">star_border</i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis tristique sollicitudin nibh sit amet commodo. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Eget nullam non nisi est sit amet facilisis magna etiam. Sed vulputate mi sit amet mauris commodo quis imperdiet massa. Neque vitae tempus quam pellentesque nec nam aliquam. Tristique risus nec feugiat in fermentum posuere urna nec tincidunt. Elementum nisi quis eleifend quam. Curabitur vitae nunc sed velit dignissim sodales. Nullam vehicula ipsum a arcu cursus vitae. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus.</p>
+            </div>
+            <div class="sous_sujet">
+                <h1>Titre sous-sujet N°X</h1>
+                <h2>Created by Elric Launay</h2>
+                <i class='fas fa-bell' style='font-size:36px' onclick="toggleBell(this);""></i>
+                <i class="material-icons" style="font-size:36px" onclick="toggleStar(this);">star_border</i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis tristique sollicitudin nibh sit amet commodo. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Eget nullam non nisi est sit amet facilisis magna etiam. Sed vulputate mi sit amet mauris commodo quis imperdiet massa. Neque vitae tempus quam pellentesque nec nam aliquam. Tristique risus nec feugiat in fermentum posuere urna nec tincidunt. Elementum nisi quis eleifend quam. Curabitur vitae nunc sed velit dignissim sodales. Nullam vehicula ipsum a arcu cursus vitae. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus.</p>
             </div>
         </div>
 </html>

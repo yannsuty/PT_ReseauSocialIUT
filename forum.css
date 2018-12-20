@@ -31,17 +31,34 @@ C0-M19-J89-N0
 R253 V200 B47
 */
 html{
-	
+	margin: 0;
 }
 body{
 	margin:0;
+	font: 700 1em "cabin", Arial, "Helvetica Neue", Helvetica, "Bitstream Vera Sans", sans-serif;
 }
 
 body #left-menu{
 	color:white;
+	min-height: 100vh;
+	position: fixed;
+	font-size: 0.813em;
+	letter-spacing: 0.05em;
+	font: 700 1em "cabin", Arial, "Helvetica Neue", Helvetica, "Bitstream Vera Sans", sans-serif;
+}
+div #accordion {
+	cursor: pointer; 
+}
+#right-forum-content i{
+	cursor:pointer;
+	width: 46px;
+	text-align: center;
 }
 #left-menu{
-	float:left;
+	position: static;
+	left:0;
+	top:0;
+	bottom:0;
 	width: 20%;
 	background-color: rgb(224,0,52);
 }
@@ -56,18 +73,70 @@ body #left-menu{
 }
 #left-menu a:hover{
 	text-decoration: underline;
+	cursor: pointer;
 }
 #left-menu a:active{
 	text-decoration: underline;
 }
 ul{
-	
+	list-style-type: none;
+	padding-right: 40px;
+}
+li{
+	list-style-type: none;
 }
 
 #right-forum-content{
-	margin-left: 30%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	margin-left: 27.5%;
+	padding:2%;
 	background: #f2f2f2;
+	width:60%;
+	letter-spacing: 0.05em;
+	font-size: 1em;
+}
+#right-forum-content h1 {
+	text-transform: ;
+	display: inline;
+}
+#right-forum-content h2 {
+	display: inline;
+	font-style: italic;
+}
+#right-forum-content i{
+	float:right;
 }
 
-/*fhejbferf
-fzehbfzef*/
+.sous_sujet{
+	padding: 2%;
+	border:black;
+}
+
+.sous_sujet p{
+	padding-left: 3%;
+}
+div:hover.sous_sujet {
+	background-color: rgb(224,0,52);
+	color:white;
+}
+#recherche-container {
+	background-color: #4a5f70;
+	text-align: center;
+	padding:2%;
+}
+#recherche-container button {
+	margin:5%;
+	width:20%;
+	min-height:4vh;
+	background-color: #f2f2f2;
+	border: 2px solid rgb(224,0,52);
+	color:black;
+}
+#recherche-container input {
+	width: 60%;
+	border: 2px solid rgb(224,0,52);
+	min-height:4vh;
+	background-color: #f2f2f2;
+	color:black;
+}
