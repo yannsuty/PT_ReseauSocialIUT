@@ -1,5 +1,9 @@
 security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    encoders:
+        App\Entity\User:
+            algorithm: bcrypt
+            cost: 15
     providers:
         in_memory: { memory: ~ }
     firewalls:
@@ -7,8 +11,10 @@ security:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
-            anonymous: true
-
+            anonymous: ~
+            form_login:
+                login_path: login
+                check_path: login
             # activate different ways to authenticate
 
             # http_basic: true

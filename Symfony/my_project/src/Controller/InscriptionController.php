@@ -8,13 +8,15 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Form\Inscription;
 use App\Entity\User;
+
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
  
 class InscriptionController extends AbstractController
 {
     /**
      * @Route("/inscription", name="inscription") 
      */
-    public function inscription(Request $request)
+    public function inscription(Request $request, UserPasswordEncoderInterface $encoder)
     {
         $user = new User();
         $form = $this->createForm(Inscription::class,$user);
@@ -25,6 +27,7 @@ class InscriptionController extends AbstractController
         {
             echo "inscription réussi"; 
             echo $user->getStatut();
+            #$user->setPassword($encoder->encodePassword($user, "test"));
             $em=$this->getDoctrine()->getManager();
             $em->persist($user);
             $em->flush();#convertie la requete en sql
@@ -42,7 +45,7 @@ class InscriptionController extends AbstractController
     {
         $message = (new \Swift_Message('Hello Email'))
             ->setFrom('eureka@alwaysdata.net')
-            ->setTo('ol3jg@vmani.com')
+            ->setTo('andjokaido@gmail.com')
             ->setBody(
                 $this->renderView('base.html.twig'),
                 'text/html'
