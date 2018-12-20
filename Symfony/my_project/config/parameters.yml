@@ -1,0 +1,13 @@
+parameters:
+    mailer_transport: smtp
+    mailer_host: smtp-eureka.alwaysdata.net
+    mailer_user: eureka@alwaysdata.net
+    mailer_password: pt_eureka
+    locale: fr
+    options:
+       name:
+           required: false
+           display: true
+       surname:
+           required: true
+           display: true

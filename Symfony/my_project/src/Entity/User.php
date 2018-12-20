@@ -6,9 +6,14 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @ORM\Entity 
+ * @ORM\Table(name="eureka_user")
+ *
+ * @UniqueEntity(fields="mail", message="le mail est deja utilise")
+ * @UniqueEntity(fields="mail_upec", message="le mail est deja utilise")
  */
 class User implements UserInterface
 {
@@ -27,19 +32,24 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=150, unique=true)
-     * @Assert\Email(message = "mail invalide", checkMX = true))
+     * @Assert\Email(message = "mail invalide"))
      */
     private $mail_upec;
 
     /**
-     * @ORM\Column(type="json")
+     * @ORM\Column(type="json",nullable=true)
      */
     private $roles = [];
 
     /**
      * @var string The hashed password
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", name="mdp",nullable=true)
      */
+    private $hashpassword;
+    
+    /*
+    * @Assert\Length(max=250)
+    */ 
     private $password;
     
      /**
@@ -55,12 +65,12 @@ class User implements UserInterface
     private $prenom;
     
     /**
-     * @ORM\Column(name="date_de_naissance", type="/DateTime")
+     * @ORM\Column(name="datenaiss", type="date",nullable=true)
      */
     private $date_de_naissance;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $statut;
 
@@ -116,7 +126,7 @@ class User implements UserInterface
         return $this;
     }
 
-    public function setDateDeNaissance(\DateTime $date_de_naissance): self
+    public function setDateDeNaissance(\DateTime $date_de_naissance = null): self
     {
         $this->date_de_naissance = $date_de_naissance;
 
@@ -184,9 +194,21 @@ class User implements UserInterface
         return (string) $this->password;
     }
 
+    public function getHashPassword(): string
+    {
+        return (string) $this->hashpassword;
+    }
+
     public function setPassword(string $password): self
     {
         $this->password = $password;
+
+        return $this;
+    }
+
+    public function setHashPassword(string $hashpassword): self
+    {
+        $this->hashpassword = $hashpassword;
 
         return $this;
     }
