@@ -10,6 +10,7 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use App\Form\Inscription;
 use App\Entity\User;
 use App\Form\Mdp;
+use App\Entity\Cle_mail;
  
 class InscriptionController extends AbstractController
 {
@@ -25,22 +26,43 @@ class InscriptionController extends AbstractController
         
         if($form->isSubmitted() && $form->isValid())//vérification des valeur entré
         {
-            echo "inscription réussi";  
+            echo "inscription réussi"; 
             $em=$this->getDoctrine()->getManager();
             $em->persist($user);
             $em->flush();#convertit la requete en sql
-        }
-
+            return $this->render('base.html.twig');
+        }else
+        {
         return $this->render('Inscription.html.twig', array(
             'form' => $form->createView(),
         ));
+        }
     }
     
     /**
      * @Route("/inscription/mail", name="mail verif")
      */
-    public function mailverif( \Swift_Mailer $mailer)
+    public function mailverif( \Swift_Mailer $mailer, UserPasswordEncoderInterface $passwordEncoder)
     {
+    $id = 7;
+
+        $cle = new Cle_mail();//intialise la table clé_mail
+        $cle->setId($id);//ajoute l'id de l'utilisateur
+        $cle->setDate();//ajoute  la date à la second près 
+        $idhash=$passwordEncoder->encodePassword(new User(),$id);//génére la clé a partire de l'id
+        $cle->setCle($idhash);//ajoute la clé
+
+        $user = $this->getDoctrine()
+            ->getRepository(User::class)
+            ->find($id);
+
+
+        if(!$user)//si l'utilisateur n'existe pas
+        {
+            echo "pas d'user";
+        }
+        echo $user->getMail();
+
         $message = (new \Swift_Message('Hello Email'))//indiquer le sujet du mail
             ->setFrom('eureka@alwaysdata.net')//set l'expediteur
             ->setTo('vianney.demarquet@etu.u-pec.fr')//set le destinataire 
@@ -54,10 +76,12 @@ class InscriptionController extends AbstractController
     }
     
     /**
-     * @Route("/inscription/modifier_mdp", name="modifier mot de passe ")
+     * @Route("/inscription/modifier_mdp/{cle}", name="modifier mot de passe ")
      */
-    public function setmdp(Request $request,UserPasswordEncoderInterface $passwordEncoder)
-    {
+    //clé = clé pour retrouver l'utilisateur (mise dans l'ip) 
+    public function setmdp(Request $request,UserPasswordEncoderInterface $passwordEncoder,$cle)
+    {    
+        echo $cle;
         $user = new User();
         $form = $this->createForm(Mdp::class,$user);//création du formulaire
 
