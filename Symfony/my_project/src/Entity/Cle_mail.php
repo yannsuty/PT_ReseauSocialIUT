@@ -3,29 +3,30 @@
 //table contenant le lien evoyer par mail et l'utilisateur à la quelle il corespond
 
 namespace App\Entity;
+
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="Cle_mail")
+ * @ORM\Table(name="eureka_inscription")
  */
-
 class Cle_mail
 {
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Id()
+     * @ORM\Column(type="integer", unique=true)
      */
     private $id;
 
-    /*
-     * @ORM\Colum(type="string", unique=true)
+    /**
+     * @ORM\Column(type="string", unique=true, length=250)
      */
     private $cle;
 
-    /*
-     * @ORM\Column(type="datetime")
+    /**
+     * @ORM\Column(type="date")
      */
     private $date;
 
