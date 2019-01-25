@@ -44,13 +44,14 @@ class InscriptionController extends AbstractController
      */
     public function mailverif( \Swift_Mailer $mailer, UserPasswordEncoderInterface $passwordEncoder)
     {
-    $id = 22;
+    $id = 68;
 
         $cle = new Cle_mail();//intialise la table clé_mail
         $cle->setId($id);//ajoute l'id de l'utilisateur
         $cle->setDate();//ajoute  la date à la second près 
 
         $idhash=$passwordEncoder->encodePassword(new User(),$id);//génére la clé a partire de l'id
+        $idhash=str_replace('/','',$idhash);//enlève tout les '/' de la clé
         
         $em=$this->getDoctrine()->getManager();
         
@@ -58,6 +59,7 @@ class InscriptionController extends AbstractController
         {
 
             $idhash=$passwordEncoder->encodePassword(new User(),$id);//génére la clé a partire de l'id
+            $idhash=str_replace('/','',$idhash);//enlève tout les '/' de la clé
             
         }
 
@@ -101,28 +103,32 @@ class InscriptionController extends AbstractController
     //clé = clé pour retrouver l'utilisateur (mise dans l'ip) 
     public function setmdp(Request $request,UserPasswordEncoderInterface $passwordEncoder, $cle)
     {   
-       echo $cle; 
+
         $em=$this->getDoctrine()->getManager();
-/*
-        $link=$em->getRepository(Cle_mail::class)->findBy(["cle"=>$cle]);
-        var_dump($link);
-echo $link[0];
-            $user=$em->getRepository(User::class)->findBy(["id"=>$link[1]->getId()]);
-            $em->remove($link[1]);
- */
 
-        $user = new User();
-        $form = $this->createForm(Mdp::class,$user);//création du formulaire
+        $userpass = new User();
+        $form = $this->createForm(Mdp::class,$userpass);//création du formulaire
 
-        $form->handleRequest($request);//récupération des valeur entré
+        $link=$em->getRepository(Cle_mail::class)->findBy(["cle"=>$cle]);//récupère l'id lié à cette clé
+
+        if($link!=null)//si la clé existe
+        { 
+            $user=$em->getRepository(User::class)->findBy(["id"=>$link[0]->getId()]);//récupère l'utilisateur lié à cette id
+            $em->remove($link[0]);//suprime la clé
+
+            $form->handleRequest($request);//récupération des valeur entré
         
-        if($form->isSubmitted() && $form->isValid())//vérification des valeur entré
-        {
-            $hashpassword=$passwordEncoder->encodePassword($user,$user->getPassword());//hash le mot de passe
-            $user->setHashPassword($hashpassword);
+            if($form->isSubmitted() && $form->isValid())//vérification des valeur entré
+            {
 
-            $em->persist($user);
-            $em->flush();#convertie la requete en sql
+                $hashpassword=$passwordEncoder->encodePassword($userpass,$userpass->getPassword());//hash le mot de passe
+                $user[0]->setHashPassword($hashpassword);
+
+                $em->persist($user[0]);
+                $em->flush();#convertie la requete en sql
+            }
+        }else{
+            echo "clé n'existe pas";
         }
 
         return $this->render('setmdp.html.twig', array(
