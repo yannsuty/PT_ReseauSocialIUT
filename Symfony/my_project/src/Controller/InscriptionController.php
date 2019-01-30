@@ -4,6 +4,7 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Routing\RouteCollection;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
@@ -17,7 +18,7 @@ class InscriptionController extends AbstractController
     /**
      * @Route("/inscription", name="inscription") 
      */
-    public function inscription(Request $request)
+    public function inscription(Request $request, \Swift_Mailer $mailer, UserPasswordEncoderInterface $encoder)
     {
         $user = new User();
         $form = $this->createForm(Inscription::class,$user);
@@ -30,7 +31,11 @@ class InscriptionController extends AbstractController
             $em=$this->getDoctrine()->getManager();
             $em->persist($user);
             $em->flush();#convertit la requete en sql
+
+         
+            $this->mailverif($mailer,$encoder, $user->getId());
             return $this->render('base.html.twig');
+
         }else
         {
         return $this->render('Inscription.html.twig', array(
@@ -42,10 +47,8 @@ class InscriptionController extends AbstractController
     /**
      * @Route("/inscription/mail", name="mail verif")
      */
-    public function mailverif( \Swift_Mailer $mailer, UserPasswordEncoderInterface $passwordEncoder)
+    public function mailverif( \Swift_Mailer $mailer, UserPasswordEncoderInterface $passwordEncoder, $id)
     {
-    $id = 68;
-
         $cle = new Cle_mail();//intialise la table clé_mail
         $cle->setId($id);//ajoute l'id de l'utilisateur
         $cle->setDate();//ajoute  la date à la second près 
