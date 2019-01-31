@@ -1,29 +1,35 @@
 <?php
+#Yann
 
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Form\Connexion;
 use App\Entity\User;
 
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
-
-class AccueilController extends AbstractController
-{
+class AccueilController extends AbstractController {
     /**
      * @Route("/", name="accueil")
      */
-    public function index(Request $request, AuthenticationUtils $authenticationUtils) {
-        $lastMail = $authenticationUtils->getLastUsername();
-        return $this->render('accueil/index.html.twig', ['last_mail' => $lastMail]);
- 	}
+    public function index(Request $request, UserPasswordEncoderInterface $passwordEncoder) {
+        $user = new User();//Creation d'un user
+        $form = $this->createForm(Connexion::class, $user); //Creation du formulaire de connexion
+        $form->handleRequest($request); //On recupere les données du formulaires
+        if ($form->isSubmitted()) { //Si qq chose a été donné
+            $em = $this->getDoctrine()->getManager(); //On charge doctrine pour des requetes sql
+            $connected = $em->getRepository(User::class)->findBy(["mail"=>$user->getMail()]); //On recupere le user par rapport au mail
+            if ($passwordEncoder->isPasswordValid($connected[0], $user->getPassword())) { //Si mdp est le bon
+            	//Creer session
+            	//Appeler function connecte
+            	echo "Bravo tu es connecte";
+            	return $this->render('accueil/connecte.html.twig');
+            }
+            echo "<br><br><br><br>";
 
-    public function connexion(Request $request, AuthenticationUtils $authenticationUtils) {
-        $lastMail = $authenticationUtils->getLastUsername();
-        
-        return $this->render('accueil/index.html.twig', ['last_mail' => $lastMail]);
-    }
+        }
+        return $this->render('accueil/index.html.twig', ['form'=>$form->createView()]);
+ 	}
 }

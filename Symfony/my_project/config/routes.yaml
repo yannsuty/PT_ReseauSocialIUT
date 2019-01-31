@@ -4,4 +4,4 @@ index:
 
 connexion:
     path: /connexion
-    controller: App\Controller\AccueilController::connexion
+    controller: App\Controller\AccueilController::index

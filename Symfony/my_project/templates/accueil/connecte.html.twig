@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}{#recupere base html head, body#}
+
+{% block title %}Hello !{% endblock %}{#titre#}
+{% block stylesheets %}
+<style type="text/css">
+    form label {
+        width: 150px;
+    }
+</style>
+{% endblock %}
+{% block connexion %}
+    <span>Bienvenue personne inconnu parce qu'il y a pas encore de sessions</span>
+{% endblock %}
