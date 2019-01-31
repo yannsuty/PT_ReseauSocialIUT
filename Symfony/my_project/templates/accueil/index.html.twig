@@ -9,11 +9,17 @@
 </style>
 {% endblock %}
 {% block connexion %}
+{% if connecte==true %}
+<span>Bienvenue {{ nom }}.</span>
+<button type="submit">Deconnexion</button>
+{% else %}
 <div id="connexion" class="divhead">
     {{form_start(form) }}
         {{ form_row(form.mail) }}
         {{ form_row(form.password) }}
-        <button type="submit">login</button>
+        <button>login</button>
+        <a href="http://eureka.alwaysdata.net/demarquet/PT_ReseauSocialIUT/Symfony/my_project/public/inscription">inscription</a>
     {{ form_end(form) }}
 </div>
+{% endif %}
 {% endblock %}
